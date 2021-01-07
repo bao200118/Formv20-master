@@ -166,7 +166,7 @@ namespace RestaurantManagerment
                 }
                 if (txtThuKho.Text == "")
                 {
-                    MessageBox.Show("Vui lòng nhập Thủ kho !");
+                    MessageBox.Show("Vui lòng nhập Nhân viên thủ kho !");
                     return;
                 }
 

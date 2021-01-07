@@ -53,11 +53,6 @@ namespace RestaurantManagerment
         //======================== Thêm Nhóm Món Ăn =============================
         private void btnThemNhomMon_Click(object sender, EventArgs e)
         {
-            if (txtMaNhomMon.Text == "")
-            {
-                MessageBox.Show("Nhập Mã Nhóm");
-                return;
-            }
 
             if (txtTenNhom.Text == "")
             {

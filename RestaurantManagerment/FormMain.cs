@@ -16,6 +16,12 @@ namespace RestaurantManagerment
         Control c;
         Bunifu.Framework.UI.BunifuFlatButton button;
         string TaiKhoangDN;
+        public FormMain()
+        {
+            TaiKhoangDN = "QL001";
+            InitializeComponent();
+            c = tab1;
+        }
         public FormMain(string TKDN)
         {
             TaiKhoangDN = TKDN;
