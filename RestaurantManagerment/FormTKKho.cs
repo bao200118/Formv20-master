@@ -97,7 +97,7 @@ namespace RestaurantManagerment
                         string DV = NguyenLieu_BUS.LayDVNguyenLieu(c.Name);
                         SL = NguyenLieu_BUS.LaySLNguyenLieu(c.Name);
                         SL = SL - int.Parse(c.Text);
-                        if (SL>0) TongKetTK(c.Name,SL);
+                        if (SL>=0) TongKetTK(c.Name,SL);
                         else
                         {
                             MessageBox.Show("Số lượng nguyên liệu sử dụng của " + c.Name + " không được nhiều hơn số lượng trong kho","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
