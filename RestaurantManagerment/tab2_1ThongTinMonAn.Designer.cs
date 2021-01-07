@@ -225,6 +225,7 @@
             // 
             // cbNhomMon
             // 
+            this.cbNhomMon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNhomMon.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNhomMon.FormattingEnabled = true;
             this.cbNhomMon.Location = new System.Drawing.Point(265, 55);
