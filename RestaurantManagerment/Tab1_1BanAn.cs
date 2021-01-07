@@ -219,6 +219,9 @@ namespace RestaurantManagerment
 
                 using (os)
                 {
+                    //Khi báo lỗi tick vào ô itextsharp, lỗi này đã được itextsharp exception xử lý rồi nên sẽ không sao
+                    //Sau khi skip exception của lỗi này thì chương trình vẫn chạy bình thường
+                    //Lỗi này không xuất hiện khi chạy ứng dụng cài bằng file setup
                     PdfWriter wri = PdfWriter.GetInstance(doc, os);
                     doc.Open();
                     PdfPTable table = new PdfPTable(1);
