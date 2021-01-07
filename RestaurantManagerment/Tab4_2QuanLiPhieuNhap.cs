@@ -301,7 +301,6 @@ namespace RestaurantManagerment
 
         private void Tab4_2QuanLiPhieuNhap_Load(object sender, EventArgs e)
         {
-            this.Controls.Add(this.gDGVPhieuNhap);
             LoadPhieuNhap();
             txtMaPN.ReadOnly = true;
             txtTenNL.ReadOnly = true;
