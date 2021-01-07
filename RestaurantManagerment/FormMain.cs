@@ -126,7 +126,7 @@ namespace RestaurantManagerment
             {
                 button.colbackground = Color.White;
                 tab4.BringToFront();
-                tab4.PerformLayout();
+                tab4.Select();
                 c = tab4;
                 button = QLHD;
             }

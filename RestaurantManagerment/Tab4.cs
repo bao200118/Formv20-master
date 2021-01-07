@@ -25,6 +25,7 @@ namespace RestaurantManagerment
 
         private void Tab4_Enter(object sender, System.EventArgs e)
         {
+            tab4_1QuanLiHoaDon1.Select();
             Tab4_3QuanLyXuatKho1.Select();
         }
 

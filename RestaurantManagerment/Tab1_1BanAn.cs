@@ -22,7 +22,7 @@ namespace RestaurantManagerment
     public partial class Tab1_1BanAn : UserControl
     {
         internal bool FormActive = false;
-        string stringIMAGE = System.Environment.CurrentDirectory + @"restaurant-icon.jpg";
+        string stringIMAGE = System.Environment.CurrentDirectory + @"/restaurant-icon.jpg";
         internal string TKDN;
         public Tab1_1BanAn()
         {
@@ -361,6 +361,7 @@ namespace RestaurantManagerment
                 lbTrangThai.ForeColor = Color.Red; // load lại màu chữ
 
                 LoadHoaDon(danhSachBanAn[indexTable].ID); // sau khi xóa thì load lại hóa đơn
+                panelOrderMon.SendToBack();
             }
         }
 

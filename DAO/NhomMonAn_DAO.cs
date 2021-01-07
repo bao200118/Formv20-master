@@ -64,7 +64,7 @@ namespace DAO
         public static bool ThemNhomMonAn(NhomMonAn_DTO nhomMonAn)
         {
             // chuỗi truy vấn thêm 1 Nhom mon An vào bảng nhom Món Ăn
-            string QueryString = string.Format("insert into NhomMon(MaNhom,TenNhom) values('{0}','{1}')", nhomMonAn.MaNhomMonAn, nhomMonAn.TenNhomMonAn);
+            string QueryString = string.Format("insert into NhomMon(TenNhom) values('{0}')", nhomMonAn.TenNhomMonAn);
             conn = DataProvider.OpenConnection();
             try
             {

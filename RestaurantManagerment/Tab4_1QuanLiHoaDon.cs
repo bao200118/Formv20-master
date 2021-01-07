@@ -132,5 +132,10 @@ namespace RestaurantManagerment
                 }
             }
         }
+
+        private void Tab4_1QuanLiHoaDon_Enter(object sender, EventArgs e)
+        {
+            LayDanhSachHoaDon();
+        }
     }
 }

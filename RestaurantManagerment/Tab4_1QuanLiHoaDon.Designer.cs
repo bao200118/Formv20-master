@@ -332,6 +332,7 @@
             this.Name = "Tab4_1QuanLiHoaDon";
             this.Size = new System.Drawing.Size(1083, 804);
             this.Load += new System.EventHandler(this.Tab4_1QuanLiHoaDon_Load);
+            this.Enter += new System.EventHandler(this.Tab4_1QuanLiHoaDon_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachHoaDon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

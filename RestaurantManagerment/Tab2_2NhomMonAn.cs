@@ -60,19 +60,8 @@ namespace RestaurantManagerment
                 return;
             }
             NhomMonAn_DTO nhomMonAn = new NhomMonAn_DTO();
-            nhomMonAn.MaNhomMonAn = txtMaNhomMon.Text.ToString();
             nhomMonAn.TenNhomMonAn = txtTenNhom.Text.ToString();
-            if (danhSachNhomMonAn != null)
-            {
-                foreach (NhomMonAn_DTO nm in danhSachNhomMonAn)
-                {
-                    if (nhomMonAn.MaNhomMonAn == nm.MaNhomMonAn)
-                    {
-                        MessageBox.Show("Mã nhóm món ăn đã có rồi");
-                        return;
-                    }
-                }
-            }
+
             if (NhomMonAn_BUS.ThemNhomMonAn(nhomMonAn))
             {
                 drNhomMonAn = null;
