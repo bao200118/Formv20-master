@@ -21,6 +21,7 @@ namespace RestaurantManagerment
 {
     public partial class Tab5 : UserControl
     {
+        bool DaChay = true;
         string KieuTK="";
         public Tab5()
         {
@@ -95,15 +96,19 @@ namespace RestaurantManagerment
             if (KieuTK == "Nam")
             {
                 BangThongKeTheoNam();
+
             }
-            else if (KieuTK == "Thang")
+            else if (KieuTK == "Thang"&&!DaChay)
             {
                 BangThongKeTheoThang();
+
             }
+            DaChay = false;
         }
         public void BangThongKeTheoThang()
         {
             BatBieuDo();
+            DaChay = true;
             DataTable dtHoaDon = HoaDonOrder_BUS.LocHoaDonTheoThang(cbNam.Text);
             List<QuanLiHoaDon_DTO> lstHD = new List<QuanLiHoaDon_DTO>();
             if (dtHoaDon == null)
@@ -130,6 +135,7 @@ namespace RestaurantManagerment
         }
         private void btnThongKeTheoThang_Click(object sender, EventArgs e)
         {
+            DaChay = true;
             KieuTK = "Thang";
             lbTK.Text = "Thống kê hàng tháng";
             cbNam.Items.Clear();
@@ -137,7 +143,7 @@ namespace RestaurantManagerment
             {
                 cbNam.Items.Add((int.Parse(DateTime.Now.ToString("yyyy")) - i));
             }
-            cbNam.Text = cbNam.Items[9].ToString();
+            cbNam.Text = cbNam.Items[10].ToString();
             BangThongKeTheoThang();
         }
 
