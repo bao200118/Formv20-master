@@ -273,6 +273,9 @@
     <Compile Include="Tab5.Designer.cs">
       <DependentUpon>Tab5.cs</DependentUpon>
     </Compile>
+    <Content Include="restaurant-icon.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="FormTKKho.resx">
       <DependentUpon>FormTKKho.cs</DependentUpon>
     </EmbeddedResource>

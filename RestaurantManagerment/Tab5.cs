@@ -108,7 +108,6 @@ namespace RestaurantManagerment
         public void BangThongKeTheoThang()
         {
             BatBieuDo();
-            DaChay = true;
             DataTable dtHoaDon = HoaDonOrder_BUS.LocHoaDonTheoThang(cbNam.Text);
             List<QuanLiHoaDon_DTO> lstHD = new List<QuanLiHoaDon_DTO>();
             if (dtHoaDon == null)
