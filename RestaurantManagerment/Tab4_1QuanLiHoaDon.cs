@@ -16,6 +16,7 @@ namespace RestaurantManagerment
 {
     public partial class Tab4_1QuanLiHoaDon : UserControl
     {
+        internal string TKDN;
         public Tab4_1QuanLiHoaDon()
         {
             InitializeComponent();
@@ -85,36 +86,50 @@ namespace RestaurantManagerment
         //---------------Xóa Hóa Đơn-----------
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (dr == null)
+            if (TKDN.Substring(0, 2) == "NV")
             {
-                MessageBox.Show("Chọn hóa đơn muốn xóa");
-                return;
-            }
-            if (MessageBox.Show("Xác nhận xóa", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-            {
-                if (HoaDonOrder_BUS.XoaHoaDon(int.Parse(dr.Cells["IDHoaDon"].Value.ToString())))
-                {
-                    dr = null;
-                    LayDanhSachHoaDon();
-                    MessageBox.Show("Xóa thành công");
-                    return;
-                }
+                MessageBox.Show("Chỉ có chức vụ quản lý mới được sử dụng chức năng này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
-                MessageBox.Show("Xóa thất bại");
+            {
+                if (dr == null)
+                {
+                    MessageBox.Show("Chọn hóa đơn muốn xóa");
+                    return;
+                }
+                if (MessageBox.Show("Xác nhận xóa", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    if (HoaDonOrder_BUS.XoaHoaDon(int.Parse(dr.Cells["IDHoaDon"].Value.ToString())))
+                    {
+                        dr = null;
+                        LayDanhSachHoaDon();
+                        MessageBox.Show("Xóa thành công");
+                        return;
+                    }
+                }
+                else
+                    MessageBox.Show("Xóa thất bại");
+            }
         }
 
         //------------------Xóa Tất cả Hóa đơn-----------
         private void btnXoaTatCa_Click(object sender, EventArgs e)
         {
-            if (lstHoaDon == null)
-                return;
-            if (MessageBox.Show("Xóa toàn bộ hóa đơn", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (TKDN.Substring(0, 2) == "NV")
             {
-                HoaDonOrder_BUS.XoaToanBoHoaDon();
-                MessageBox.Show("Đã xóa");
-                LayDanhSachHoaDon();
-                return;
+                MessageBox.Show("Chỉ có chức vụ quản lý mới được sử dụng chức năng này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (lstHoaDon == null)
+                    return;
+                if (MessageBox.Show("Xóa toàn bộ hóa đơn", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    HoaDonOrder_BUS.XoaToanBoHoaDon();
+                    MessageBox.Show("Đã xóa");
+                    LayDanhSachHoaDon();
+                    return;
+                }
             }
         }
     }

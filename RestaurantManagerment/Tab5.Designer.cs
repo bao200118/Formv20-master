@@ -33,44 +33,44 @@ namespace RestaurantManagerment
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grboxTKDoanhThu = new System.Windows.Forms.GroupBox();
             this.btnTKTheoNgay = new Guna.UI.WinForms.GunaAdvenceButton();
             this.dtpNgay = new System.Windows.Forms.DateTimePicker();
             this.btnThongKeTheoThang = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnThongKeTheoNam = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.lbDuongSoc = new Guna.UI.WinForms.GunaAdvenceButton();
             this.lbDTNum = new System.Windows.Forms.Label();
             this.lbDT = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbBieuDo = new System.Windows.Forms.Label();
             this.cbNam = new System.Windows.Forms.ComboBox();
             this.lbTK = new System.Windows.Forms.Label();
             this.gnBTN_IN = new Guna.UI.WinForms.GunaAdvenceButton();
             this.chartDoanhThu = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.groupBox1.SuspendLayout();
+            this.grboxTKDoanhThu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDoanhThu)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grboxTKDoanhThu
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(255)))));
-            this.groupBox1.Controls.Add(this.btnTKTheoNgay);
-            this.groupBox1.Controls.Add(this.dtpNgay);
-            this.groupBox1.Controls.Add(this.btnThongKeTheoThang);
-            this.groupBox1.Controls.Add(this.btnThongKeTheoNam);
-            this.groupBox1.Controls.Add(this.gunaAdvenceButton1);
-            this.groupBox1.Controls.Add(this.lbDTNum);
-            this.groupBox1.Controls.Add(this.lbDT);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Maroon;
-            this.groupBox1.Location = new System.Drawing.Point(53, 30);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(980, 309);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "                          Thống Kê Doanh Thu       ";
+            this.grboxTKDoanhThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(255)))));
+            this.grboxTKDoanhThu.Controls.Add(this.btnTKTheoNgay);
+            this.grboxTKDoanhThu.Controls.Add(this.dtpNgay);
+            this.grboxTKDoanhThu.Controls.Add(this.btnThongKeTheoThang);
+            this.grboxTKDoanhThu.Controls.Add(this.btnThongKeTheoNam);
+            this.grboxTKDoanhThu.Controls.Add(this.lbDuongSoc);
+            this.grboxTKDoanhThu.Controls.Add(this.lbDTNum);
+            this.grboxTKDoanhThu.Controls.Add(this.lbDT);
+            this.grboxTKDoanhThu.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grboxTKDoanhThu.ForeColor = System.Drawing.Color.Maroon;
+            this.grboxTKDoanhThu.Location = new System.Drawing.Point(53, 30);
+            this.grboxTKDoanhThu.Margin = new System.Windows.Forms.Padding(4);
+            this.grboxTKDoanhThu.Name = "grboxTKDoanhThu";
+            this.grboxTKDoanhThu.Padding = new System.Windows.Forms.Padding(4);
+            this.grboxTKDoanhThu.Size = new System.Drawing.Size(980, 309);
+            this.grboxTKDoanhThu.TabIndex = 4;
+            this.grboxTKDoanhThu.TabStop = false;
+            this.grboxTKDoanhThu.Text = "                          Thống Kê Doanh Thu       ";
             // 
             // btnTKTheoNgay
             // 
@@ -191,38 +191,38 @@ namespace RestaurantManagerment
             this.btnThongKeTheoNam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnThongKeTheoNam.Click += new System.EventHandler(this.btnThongKeHangNam_Click);
             // 
-            // gunaAdvenceButton1
+            // lbDuongSoc
             // 
-            this.gunaAdvenceButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaAdvenceButton1.AnimationSpeed = 0.03F;
-            this.gunaAdvenceButton1.BaseColor = System.Drawing.Color.Linen;
-            this.gunaAdvenceButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton1.CheckedBaseColor = System.Drawing.Color.Transparent;
-            this.gunaAdvenceButton1.CheckedBorderColor = System.Drawing.Color.Transparent;
-            this.gunaAdvenceButton1.CheckedForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton1.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton1.CheckedImage")));
-            this.gunaAdvenceButton1.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.gunaAdvenceButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaAdvenceButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaAdvenceButton1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaAdvenceButton1.ForeColor = System.Drawing.Color.DarkRed;
-            this.gunaAdvenceButton1.Image = null;
-            this.gunaAdvenceButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaAdvenceButton1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton1.Location = new System.Drawing.Point(45, 105);
-            this.gunaAdvenceButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.gunaAdvenceButton1.Name = "gunaAdvenceButton1";
-            this.gunaAdvenceButton1.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.gunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.gunaAdvenceButton1.OnHoverForeColor = System.Drawing.Color.DarkRed;
-            this.gunaAdvenceButton1.OnHoverImage = null;
-            this.gunaAdvenceButton1.OnHoverLineColor = System.Drawing.Color.Transparent;
-            this.gunaAdvenceButton1.OnPressedColor = System.Drawing.Color.Transparent;
-            this.gunaAdvenceButton1.Size = new System.Drawing.Size(863, 12);
-            this.gunaAdvenceButton1.TabIndex = 2;
-            this.gunaAdvenceButton1.Text = "---------------------------------------------------------------------------------" +
+            this.lbDuongSoc.AnimationHoverSpeed = 0.07F;
+            this.lbDuongSoc.AnimationSpeed = 0.03F;
+            this.lbDuongSoc.BaseColor = System.Drawing.Color.Linen;
+            this.lbDuongSoc.BorderColor = System.Drawing.Color.Black;
+            this.lbDuongSoc.CheckedBaseColor = System.Drawing.Color.Transparent;
+            this.lbDuongSoc.CheckedBorderColor = System.Drawing.Color.Transparent;
+            this.lbDuongSoc.CheckedForeColor = System.Drawing.Color.White;
+            this.lbDuongSoc.CheckedImage = ((System.Drawing.Image)(resources.GetObject("lbDuongSoc.CheckedImage")));
+            this.lbDuongSoc.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.lbDuongSoc.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.lbDuongSoc.FocusedColor = System.Drawing.Color.Empty;
+            this.lbDuongSoc.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDuongSoc.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbDuongSoc.Image = null;
+            this.lbDuongSoc.ImageSize = new System.Drawing.Size(20, 20);
+            this.lbDuongSoc.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.lbDuongSoc.Location = new System.Drawing.Point(45, 105);
+            this.lbDuongSoc.Margin = new System.Windows.Forms.Padding(4);
+            this.lbDuongSoc.Name = "lbDuongSoc";
+            this.lbDuongSoc.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.lbDuongSoc.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.lbDuongSoc.OnHoverForeColor = System.Drawing.Color.DarkRed;
+            this.lbDuongSoc.OnHoverImage = null;
+            this.lbDuongSoc.OnHoverLineColor = System.Drawing.Color.Transparent;
+            this.lbDuongSoc.OnPressedColor = System.Drawing.Color.Transparent;
+            this.lbDuongSoc.Size = new System.Drawing.Size(863, 12);
+            this.lbDuongSoc.TabIndex = 2;
+            this.lbDuongSoc.Text = "---------------------------------------------------------------------------------" +
     "-----------------------------------------";
-            this.gunaAdvenceButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lbDuongSoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbDTNum
             // 
@@ -248,16 +248,16 @@ namespace RestaurantManagerment
             this.lbDT.TabIndex = 4;
             this.lbDT.Text = "Tổng doanh thu :  ";
             // 
-            // label1
+            // lbBieuDo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(464, 353);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 42);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Biểu Đồ";
+            this.lbBieuDo.AutoSize = true;
+            this.lbBieuDo.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBieuDo.Location = new System.Drawing.Point(464, 353);
+            this.lbBieuDo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbBieuDo.Name = "lbBieuDo";
+            this.lbBieuDo.Size = new System.Drawing.Size(144, 42);
+            this.lbBieuDo.TabIndex = 6;
+            this.lbBieuDo.Text = "Biểu Đồ";
             // 
             // cbNam
             // 
@@ -348,14 +348,14 @@ namespace RestaurantManagerment
             this.Controls.Add(this.gnBTN_IN);
             this.Controls.Add(this.lbTK);
             this.Controls.Add(this.cbNam);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.lbBieuDo);
+            this.Controls.Add(this.grboxTKDoanhThu);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Tab5";
             this.Size = new System.Drawing.Size(1091, 804);
             this.Load += new System.EventHandler(this.Tab5_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grboxTKDoanhThu.ResumeLayout(false);
+            this.grboxTKDoanhThu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDoanhThu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -364,12 +364,12 @@ namespace RestaurantManagerment
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grboxTKDoanhThu;
         private Guna.UI.WinForms.GunaAdvenceButton btnThongKeTheoNam;
-        private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton1;
+        private Guna.UI.WinForms.GunaAdvenceButton lbDuongSoc;
         private System.Windows.Forms.Label lbDTNum;
         private System.Windows.Forms.Label lbDT;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbBieuDo;
         private System.Windows.Forms.ComboBox cbNam;
         private System.Windows.Forms.Label lbTK;
         private Guna.UI.WinForms.GunaAdvenceButton btnThongKeTheoThang;

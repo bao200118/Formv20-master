@@ -28,53 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgrvDanhSachBan = new Guna.UI.WinForms.GunaDataGridView();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbTimKiem = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnXoaBanAn = new System.Windows.Forms.Button();
             this.btnSuaBanAn = new System.Windows.Forms.Button();
             this.btnThemBanAn = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grBoxThongTinBanAn = new System.Windows.Forms.GroupBox();
             this.lbSoBanHienCo = new System.Windows.Forms.Label();
             this.lbTrangThai = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbSoBanHienCotxt = new System.Windows.Forms.Label();
+            this.lbTrangThaitxt = new System.Windows.Forms.Label();
+            this.lbTenBan = new System.Windows.Forms.Label();
             this.txtTenBan = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvDanhSachBan)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.grBoxThongTinBanAn.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgrvDanhSachBan
             // 
             this.dtgrvDanhSachBan.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.dtgrvDanhSachBan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtgrvDanhSachBan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgrvDanhSachBan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgrvDanhSachBan.BackgroundColor = System.Drawing.Color.White;
             this.dtgrvDanhSachBan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgrvDanhSachBan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgrvDanhSachBan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgrvDanhSachBan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgrvDanhSachBan.ColumnHeadersHeight = 30;
             this.dtgrvDanhSachBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgrvDanhSachBan.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvDanhSachBan.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgrvDanhSachBan.EnableHeadersVisualStyles = false;
             this.dtgrvDanhSachBan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgrvDanhSachBan.Location = new System.Drawing.Point(37, 306);
@@ -112,17 +112,17 @@
             this.dtgrvDanhSachBan.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.DimGray;
             this.dtgrvDanhSachBan.Click += new System.EventHandler(this.dtgrvDanhSachBan_Click_1);
             // 
-            // label9
+            // lbTimKiem
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(385, 254);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 22);
-            this.label9.TabIndex = 54;
-            this.label9.Text = "Tìm Kiếm";
+            this.lbTimKiem.AutoSize = true;
+            this.lbTimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTimKiem.ForeColor = System.Drawing.Color.Black;
+            this.lbTimKiem.Location = new System.Drawing.Point(385, 254);
+            this.lbTimKiem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTimKiem.Name = "lbTimKiem";
+            this.lbTimKiem.Size = new System.Drawing.Size(90, 22);
+            this.lbTimKiem.TabIndex = 54;
+            this.lbTimKiem.Text = "Tìm Kiếm";
             // 
             // txtTimKiem
             // 
@@ -176,25 +176,25 @@
             this.btnThemBanAn.UseVisualStyleBackColor = false;
             this.btnThemBanAn.Click += new System.EventHandler(this.btnThemBanAn_Click);
             // 
-            // groupBox1
+            // grBoxThongTinBanAn
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(255)))));
-            this.groupBox1.Controls.Add(this.lbSoBanHienCo);
-            this.groupBox1.Controls.Add(this.lbTrangThai);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtTenBan);
-            this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.DarkViolet;
-            this.groupBox1.Location = new System.Drawing.Point(37, 21);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(625, 206);
-            this.groupBox1.TabIndex = 50;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông Tin Bàn Ăn";
+            this.grBoxThongTinBanAn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(255)))));
+            this.grBoxThongTinBanAn.Controls.Add(this.lbSoBanHienCo);
+            this.grBoxThongTinBanAn.Controls.Add(this.lbTrangThai);
+            this.grBoxThongTinBanAn.Controls.Add(this.lbSoBanHienCotxt);
+            this.grBoxThongTinBanAn.Controls.Add(this.lbTrangThaitxt);
+            this.grBoxThongTinBanAn.Controls.Add(this.lbTenBan);
+            this.grBoxThongTinBanAn.Controls.Add(this.txtTenBan);
+            this.grBoxThongTinBanAn.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grBoxThongTinBanAn.ForeColor = System.Drawing.Color.DarkViolet;
+            this.grBoxThongTinBanAn.Location = new System.Drawing.Point(37, 21);
+            this.grBoxThongTinBanAn.Margin = new System.Windows.Forms.Padding(4);
+            this.grBoxThongTinBanAn.Name = "grBoxThongTinBanAn";
+            this.grBoxThongTinBanAn.Padding = new System.Windows.Forms.Padding(4);
+            this.grBoxThongTinBanAn.Size = new System.Drawing.Size(625, 206);
+            this.grBoxThongTinBanAn.TabIndex = 50;
+            this.grBoxThongTinBanAn.TabStop = false;
+            this.grBoxThongTinBanAn.Text = "Thông Tin Bàn Ăn";
             // 
             // lbSoBanHienCo
             // 
@@ -220,41 +220,41 @@
             this.lbTrangThai.TabIndex = 7;
             this.lbTrangThai.Text = "Trống";
             // 
-            // label3
+            // lbSoBanHienCotxt
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(75, 161);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(173, 27);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Số Bàn Hiện Có:";
+            this.lbSoBanHienCotxt.AutoSize = true;
+            this.lbSoBanHienCotxt.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoBanHienCotxt.ForeColor = System.Drawing.Color.Black;
+            this.lbSoBanHienCotxt.Location = new System.Drawing.Point(75, 161);
+            this.lbSoBanHienCotxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbSoBanHienCotxt.Name = "lbSoBanHienCotxt";
+            this.lbSoBanHienCotxt.Size = new System.Drawing.Size(173, 27);
+            this.lbSoBanHienCotxt.TabIndex = 6;
+            this.lbSoBanHienCotxt.Text = "Số Bàn Hiện Có:";
             // 
-            // label2
+            // lbTrangThaitxt
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(72, 112);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 27);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Trạng Thái";
+            this.lbTrangThaitxt.AutoSize = true;
+            this.lbTrangThaitxt.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTrangThaitxt.ForeColor = System.Drawing.Color.Black;
+            this.lbTrangThaitxt.Location = new System.Drawing.Point(72, 112);
+            this.lbTrangThaitxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTrangThaitxt.Name = "lbTrangThaitxt";
+            this.lbTrangThaitxt.Size = new System.Drawing.Size(116, 27);
+            this.lbTrangThaitxt.TabIndex = 5;
+            this.lbTrangThaitxt.Text = "Trạng Thái";
             // 
-            // label1
+            // lbTenBan
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(72, 62);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 27);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Tên Bàn";
+            this.lbTenBan.AutoSize = true;
+            this.lbTenBan.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenBan.ForeColor = System.Drawing.Color.Black;
+            this.lbTenBan.Location = new System.Drawing.Point(72, 62);
+            this.lbTenBan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTenBan.Name = "lbTenBan";
+            this.lbTenBan.Size = new System.Drawing.Size(94, 27);
+            this.lbTenBan.TabIndex = 4;
+            this.lbTenBan.Text = "Tên Bàn";
             // 
             // txtTenBan
             // 
@@ -266,25 +266,25 @@
             this.txtTenBan.Size = new System.Drawing.Size(295, 35);
             this.txtTenBan.TabIndex = 1;
             // 
-            // tab1_1_2ThongTinBan
+            // tab1_2ThongTinBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.Controls.Add(this.dtgrvDanhSachBan);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lbTimKiem);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnXoaBanAn);
             this.Controls.Add(this.btnSuaBanAn);
             this.Controls.Add(this.btnThemBanAn);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grBoxThongTinBanAn);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "tab1_1_2ThongTinBan";
+            this.Name = "tab1_2ThongTinBan";
             this.Size = new System.Drawing.Size(1091, 804);
             this.Load += new System.EventHandler(this.tab1_1_2ThongTinBan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvDanhSachBan)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grBoxThongTinBanAn.ResumeLayout(false);
+            this.grBoxThongTinBanAn.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,17 +293,17 @@
         #endregion
 
         private Guna.UI.WinForms.GunaDataGridView dtgrvDanhSachBan;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnXoaBanAn;
         private System.Windows.Forms.Button btnSuaBanAn;
         private System.Windows.Forms.Button btnThemBanAn;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grBoxThongTinBanAn;
         private System.Windows.Forms.Label lbSoBanHienCo;
         private System.Windows.Forms.Label lbTrangThai;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbSoBanHienCotxt;
+        private System.Windows.Forms.Label lbTrangThaitxt;
+        private System.Windows.Forms.Label lbTenBan;
         private System.Windows.Forms.TextBox txtTenBan;
     }
 }

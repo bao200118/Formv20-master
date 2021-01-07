@@ -25,7 +25,7 @@ namespace RestaurantManagerment
         }
         private void Tab3QuanLiNhanSu_Load(object sender, EventArgs e)
         {
-            this.gunaShadowPanel1.Controls.Add(this.dgvDanhSachNhanVien);
+            this.pnTab.Controls.Add(this.dgvDanhSachNhanVien);
             LoadNhanVien();
         }
 
@@ -142,6 +142,11 @@ namespace RestaurantManagerment
             tk.Loaitk = nhanVien.MaNhanVien.Substring(0, 2);
             if (NhanVien_BUS.ThemNhanVien(nhanVien) && TaiKhoan_BUS.ThemTaiKhoan(tk))
             {
+                txtHoTen.Text = "";
+                txtSoDienThoai.Text = "";
+                txtChucVu.Text = "";
+                txtBacLuong.Text = "";
+                rtxtDiaChi.Text = "";
                 LoadNhanVien();
                 MessageBox.Show("Thêm thành công");
                 return;
@@ -166,7 +171,7 @@ namespace RestaurantManagerment
         }
 
         //Button Cập Nhật
-        private void gunaAdvenceButton1_Click(object sender, EventArgs e)
+        private void btnCapNhat_Click(object sender, EventArgs e)
         {
             if (drNhanVien == null)
             {
@@ -205,7 +210,7 @@ namespace RestaurantManagerment
         }
 
         //Button Xóa
-        private void gunaAdvenceButton2_Click(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
         {
             if (drNhanVien == null)
             {

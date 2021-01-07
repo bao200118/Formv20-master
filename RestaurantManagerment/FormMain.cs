@@ -18,7 +18,7 @@ namespace RestaurantManagerment
         string TaiKhoangDN;
         public FormMain()
         {
-            TaiKhoangDN = "QL002";
+            TaiKhoangDN = "NV001";
             InitializeComponent();
             c = tab1;
         }
@@ -65,6 +65,38 @@ namespace RestaurantManagerment
             }
         }
 
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            pnCoordinates.Location = new System.Drawing.Point(pnControl.Width, pnHeaderWhite.Height);
+            pnCoordinates.Size = new System.Drawing.Size(this.Width - pnControl.Width, this.Height - pnHeaderWhite.Height);
+            tab1.Location = new Point(0, 0);
+            tab1.Size = new System.Drawing.Size(this.Width - pnControl.Width, this.Height - pnHeaderWhite.Height);
+            tab2.Location = new Point(0, 0);
+            tab2.Size = pnCoordinates.Size;
+            tab3.Location = new Point(0, 0);
+            tab3.Size = pnCoordinates.Size;
+            tab4.Location = new Point(0, 0);
+            tab4.Size = pnCoordinates.Size;
+            tab5.Location = new Point(0, 0);
+            tab5.Size = pnCoordinates.Size;
+            tab1.TKDN = TaiKhoangDN;
+            tab2.TKDN = TaiKhoangDN;
+            tab3.TKDN = TaiKhoangDN;
+            tab4.TKDN = TaiKhoangDN;
+            LoadInPanel();
+            button = QLBAn;
+            button.BackColor = Color.FromArgb(136, 59, 176);
+        }
+        private void LoadInPanel()
+        {
+            pnCoordinates.Controls.Add(tab1);
+            pnCoordinates.Controls.Add(tab2);
+            pnCoordinates.Controls.Add(tab3);
+            pnCoordinates.Controls.Add(tab4);
+            pnCoordinates.Controls.Add(tab5);
+        }
+
         private void QLBAn_Click(object sender, EventArgs e)
         {
             if (c != tab1)
@@ -79,55 +111,15 @@ namespace RestaurantManagerment
 
         private void QLTD_Click(object sender, EventArgs e)
         {
-            if (TaiKhoangDN.Substring(0, 2) == "NV")
+            if (c != tab2)
             {
-                QLTD.colselected = Color.White;
-                button.colbackground = Color.FromArgb(136, 59, 176);
-                MessageBox.Show("Chỉ có chức vụ quản lý mới được truy cập vào mục này.");
-            }
-            else
-            {
-                if (c != tab2)
-                {
-                    button.colbackground = Color.White;
-                    tab2.BringToFront();
-                    tab2.Select();
-                    c = tab2;
-                    button = QLTD;
-                }
+                button.colbackground = Color.White;
+                tab2.BringToFront();
+                tab2.Select();
+                c = tab2;
+                button = QLTD;
             }
         }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            panel1.Location = new System.Drawing.Point(gunaShadowPanel1.Width, gunaGradient2Panel2.Height);
-            panel1.Size = new System.Drawing.Size(this.Width - gunaShadowPanel1.Width, this.Height - gunaGradient2Panel2.Height);
-            tab1.Location = new Point(0, 0);
-            tab1.Size = new System.Drawing.Size(this.Width - gunaShadowPanel1.Width, this.Height - gunaGradient2Panel2.Height);
-            tab2.Location = new Point(0, 0);
-            tab2.Size = panel1.Size;
-            tab3.Location = new Point(0, 0);
-            tab3.Size = panel1.Size;
-            tab4.Location = new Point(0, 0);
-            tab4.Size = panel1.Size;
-            tab5.Location = new Point(0, 0);
-            tab5.Size = panel1.Size;
-            tab3.TKDN = TaiKhoangDN;
-            tab1.Quyen = TaiKhoangDN;
-            tab2.ID = TaiKhoangDN;
-            LoadInPanel();
-            button = QLBAn;
-            button.BackColor = Color.FromArgb(136, 59, 176);
-        }
-        private void LoadInPanel()
-        {
-            panel1.Controls.Add(tab1);
-            panel1.Controls.Add(tab2);
-            panel1.Controls.Add(tab3);
-            panel1.Controls.Add(tab4);
-            panel1.Controls.Add(tab5);
-        }
-
         private void QLHD_Click(object sender, EventArgs e)
         {
             if (c != tab4)
@@ -142,12 +134,21 @@ namespace RestaurantManagerment
 
         private void TK_Click(object sender, EventArgs e)
         {
-            if (c != tab5)
+            if (TaiKhoangDN.Substring(0, 2) == "NV")
             {
-                button.colbackground = Color.White;
-                tab5.BringToFront();
-                c = tab5;
-                button = QLHD;
+                TK.colselected = Color.White;
+                button.colbackground = Color.FromArgb(136, 59, 176);
+                MessageBox.Show("Chỉ có chức vụ quản lý mới được truy cập vào mục này.","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (c != tab5)
+                {
+                    button.colbackground = Color.White;
+                    tab5.BringToFront();
+                    c = tab5;
+                    button = QLHD;
+                }
             }
         }
 
@@ -156,18 +157,18 @@ namespace RestaurantManagerment
 
         private bool m_MousePressed = false;
         private int m_oldX, m_oldY;
-        void gunaGradient2Panel2_MouseDown(object sender, MouseEventArgs e)
+        void pnHeaderWhite_MouseDown(object sender, MouseEventArgs e)
         {
             Point TS = this.PointToScreen(e.Location);
             m_oldX = TS.X;
             m_oldY = TS.Y;
             m_MousePressed = true;
         }
-        void gunaGradient2Panel2_MouseUp(object sender, MouseEventArgs e)
+        void pnHeaderWhite_MouseUp(object sender, MouseEventArgs e)
         {
             m_MousePressed = false;
         }
-        void gunaGradient2Panel2_MouseMove(object sender, MouseEventArgs e)
+        void pnHeaderWhite_MouseMove(object sender, MouseEventArgs e)
         {
             // if not maximized we can move our form
             if (m_MousePressed == true && m_WindowState != FormWindowState.Maximized)
@@ -182,49 +183,5 @@ namespace RestaurantManagerment
         }
         private FormWindowState m_WindowState = FormWindowState.Normal;
         #endregion
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Exit_Click(sender, e);
-        }
-
-        private void FormMain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void FormMain_Validated(object sender, EventArgs e)
-        {
-            this.Show();
-        }
-
-        private void FormMain_ResizeBegin(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
-        private void FormMain_ResizeEnd(object sender, EventArgs e)
-        {
-            this.Show();
-        }
-
-        private void FormMain_Layout(object sender, LayoutEventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Minimized) ;
-        }
-
-        private void FormMain_Leave(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
-        private void FormMain_Validating(object sender, CancelEventArgs e)
-        {
-            this.Hide();
-        }
     }
 }

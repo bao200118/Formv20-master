@@ -27,23 +27,23 @@ namespace RestaurantManagerment
             tab3_2QuanLiTaiKhoan1.BringToFront();
         }
 
-        private void gunaAdvenceButton3_Click(object sender, EventArgs e)
+        private void btnQuanLyNhanVien_Click(object sender, EventArgs e)
         {
             if (TKDN.Substring(0,2) == "NV")
             {
                 notification = true;
-                gunaAdvenceButton5.PerformClick();
+                btnQuanLyTaiKhoan.PerformClick();
             }
             else Tab3_1QuanLiNhanSu1.BringToFront();
         }
 
-        private void GunaAdvenceButton3_MouseUp(object sender, MouseEventArgs e)
+        private void btnQuanLyNhanVien_MouseUp(object sender, MouseEventArgs e)
         {
             if (notification)
-                MessageBox.Show("Chỉ có chức vụ quản lý mới được truy cập vào mục này.");
+                MessageBox.Show("Chỉ có chức vụ quản lý mới được truy cập vào mục này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        private void gunaAdvenceButton5_Click(object sender, EventArgs e)
+        private void btnQuanLyTaiKhoan_Click(object sender, EventArgs e)
         {
             tab3_2QuanLiTaiKhoan1.BringToFront();
             this.tab3_2QuanLiTaiKhoan1.Select();

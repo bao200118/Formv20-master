@@ -22,8 +22,8 @@ namespace RestaurantManagerment
     public partial class Tab1_1BanAn : UserControl
     {
         internal bool FormActive = false;
-        string stringIMAGE =  Directory.GetParent(System.Environment.CurrentDirectory).Parent.FullName + @"\Resources\restaurant-icon.jpg";
-        internal string Quyen;
+        string stringIMAGE = System.Environment.CurrentDirectory + @"restaurant-icon.jpg";
+        internal string TKDN;
         public Tab1_1BanAn()
         {
             InitializeComponent();
@@ -41,7 +41,7 @@ namespace RestaurantManagerment
         //Lấy thông tin nhân viên đang truy cập
         private void TTNV()
         {
-            nv = NhanVien_BUS.TimNV(Quyen);
+            nv = NhanVien_BUS.TimNV(TKDN);
         }
         //------------- lấy ngày tháng năm hiện tại ---------------------------
         void LoadThoiGian()
@@ -368,18 +368,22 @@ namespace RestaurantManagerment
         private void LoadNhomMonAn()
         {
             listNhomMonAn = NhomMonAn_DAO.LayNhomMonAn();
-            for (int i = 0; i < listNhomMonAn.Count; i++)
+            if (listNhomMonAn != null)
             {
-                Button btn = new Button() { Width = 100, Height = 35 };
-                btn.Text = listNhomMonAn[i].TenNhomMonAn;
-                btn.BackColor = Color.SkyBlue;
-                btn.ForeColor = Color.White;
-                btn.Font = new System.Drawing.Font("Arial", 10, FontStyle.Bold);
-                btn.TextAlign = ContentAlignment.MiddleCenter;
-                btn.Name= listNhomMonAn[i].TenNhomMonAn;
-                btn.Click += btn_Click;
-                btn.Tag = listNhomMonAn[i];
-                flplistNhomMon.Controls.Add(btn);
+
+                for (int i = 0; i < listNhomMonAn.Count; i++)
+                {
+                    Button btn = new Button() { Width = 100, Height = 35 };
+                    btn.Text = listNhomMonAn[i].TenNhomMonAn;
+                    btn.BackColor = Color.SkyBlue;
+                    btn.ForeColor = Color.White;
+                    btn.Font = new System.Drawing.Font("Arial", 10, FontStyle.Bold);
+                    btn.TextAlign = ContentAlignment.MiddleCenter;
+                    btn.Name = listNhomMonAn[i].TenNhomMonAn;
+                    btn.Click += btn_Click;
+                    btn.Tag = listNhomMonAn[i];
+                    flplistNhomMon.Controls.Add(btn);
+                }
             }
         }
 
@@ -419,17 +423,21 @@ namespace RestaurantManagerment
         private void loadMonAn()
         {
             listMonAn = MonAn_DAO.LoadMonAn();
-            for (int i = 0; i < listMonAn.Count; i++)
+            if (listMonAn != null)
             {
-                Guna.UI.WinForms.GunaAdvenceTileButton gunaBtn = new Guna.UI.WinForms.GunaAdvenceTileButton() { Width = 116, Height = 154 };
-                gunaBtn.Image = listMonAn[i].IMAGE;
-                gunaBtn.BaseColor = Color.LightGray;
-                gunaBtn.ImageSize = new Size(107, 90);
-                gunaBtn.Font = new System.Drawing.Font("Arial", 10, FontStyle.Bold);
-                gunaBtn.Text = listMonAn[i].TenMonAn + Environment.NewLine + listMonAn[i].Gia + " Đồng";
-                gunaBtn.DoubleClick += btn_DoubleClick;
-                gunaBtn.Tag = listMonAn[i];
-                flplistMonAn.Controls.Add(gunaBtn);
+
+                for (int i = 0; i < listMonAn.Count; i++)
+                {
+                    Guna.UI.WinForms.GunaAdvenceTileButton gunaBtn = new Guna.UI.WinForms.GunaAdvenceTileButton() { Width = 116, Height = 154 };
+                    gunaBtn.Image = listMonAn[i].IMAGE;
+                    gunaBtn.BaseColor = Color.LightGray;
+                    gunaBtn.ImageSize = new Size(107, 90);
+                    gunaBtn.Font = new System.Drawing.Font("Arial", 10, FontStyle.Bold);
+                    gunaBtn.Text = listMonAn[i].TenMonAn + Environment.NewLine + listMonAn[i].Gia + " Đồng";
+                    gunaBtn.DoubleClick += btn_DoubleClick;
+                    gunaBtn.Tag = listMonAn[i];
+                    flplistMonAn.Controls.Add(gunaBtn);
+                }
             }
         }
 
@@ -545,7 +553,7 @@ namespace RestaurantManagerment
         int chiSoCuaLsvHoaDon = -1;
         private void dgvHoaDonOrder_SelectionChanged(object sender, EventArgs e)
         {
-            if(dgvHoaDonOrder.CurrentCell.RowIndex!=null)
+            if(dgvHoaDonOrder!=null)
             chiSoCuaLsvHoaDon = dgvHoaDonOrder.CurrentCell.RowIndex;
         }
 

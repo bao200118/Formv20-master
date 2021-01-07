@@ -32,25 +32,25 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tab4_3QuanLyXuatKho));
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbDSXuatKho = new System.Windows.Forms.Label();
             this.gDGVDon = new Guna.UI.WinForms.GunaDataGridView();
             this.dtpNgay = new System.Windows.Forms.DateTimePicker();
-            this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnLoc = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnHienThi = new Guna.UI.WinForms.GunaAdvenceButton();
             ((System.ComponentModel.ISupportInitialize)(this.gDGVDon)).BeginInit();
             this.SuspendLayout();
             // 
-            // label8
+            // lbDSXuatKho
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(255)))));
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(5, 19);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(304, 39);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Danh Sách Xuất Kho";
+            this.lbDSXuatKho.AutoSize = true;
+            this.lbDSXuatKho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(255)))));
+            this.lbDSXuatKho.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDSXuatKho.Location = new System.Drawing.Point(5, 19);
+            this.lbDSXuatKho.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbDSXuatKho.Name = "lbDSXuatKho";
+            this.lbDSXuatKho.Size = new System.Drawing.Size(304, 39);
+            this.lbDSXuatKho.TabIndex = 20;
+            this.lbDSXuatKho.Text = "Danh Sách Xuất Kho";
             // 
             // gDGVDon
             // 
@@ -132,41 +132,41 @@
             this.dtpNgay.Size = new System.Drawing.Size(163, 28);
             this.dtpNgay.TabIndex = 50;
             // 
-            // gunaAdvenceButton1
+            // btnLoc
             // 
-            this.gunaAdvenceButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaAdvenceButton1.AnimationSpeed = 0.03F;
-            this.gunaAdvenceButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaAdvenceButton1.BaseColor = System.Drawing.Color.Gray;
-            this.gunaAdvenceButton1.BorderColor = System.Drawing.Color.Blue;
-            this.gunaAdvenceButton1.BorderSize = 2;
-            this.gunaAdvenceButton1.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.gunaAdvenceButton1.CheckedBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton1.CheckedForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton1.CheckedImage = null;
-            this.gunaAdvenceButton1.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.gunaAdvenceButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaAdvenceButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaAdvenceButton1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaAdvenceButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton1.Image")));
-            this.gunaAdvenceButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaAdvenceButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaAdvenceButton1.LineColor = System.Drawing.Color.Red;
-            this.gunaAdvenceButton1.Location = new System.Drawing.Point(906, 87);
-            this.gunaAdvenceButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.gunaAdvenceButton1.Name = "gunaAdvenceButton1";
-            this.gunaAdvenceButton1.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.gunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(79)))), ((int)(((byte)(109)))));
-            this.gunaAdvenceButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton1.OnHoverImage = null;
-            this.gunaAdvenceButton1.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton1.Radius = 5;
-            this.gunaAdvenceButton1.Size = new System.Drawing.Size(47, 43);
-            this.gunaAdvenceButton1.TabIndex = 53;
-            this.gunaAdvenceButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaAdvenceButton1.Click += new System.EventHandler(this.gunaAdvenceButton1_Click);
+            this.btnLoc.AnimationHoverSpeed = 0.07F;
+            this.btnLoc.AnimationSpeed = 0.03F;
+            this.btnLoc.BackColor = System.Drawing.Color.Transparent;
+            this.btnLoc.BaseColor = System.Drawing.Color.Gray;
+            this.btnLoc.BorderColor = System.Drawing.Color.Blue;
+            this.btnLoc.BorderSize = 2;
+            this.btnLoc.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnLoc.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnLoc.CheckedForeColor = System.Drawing.Color.White;
+            this.btnLoc.CheckedImage = null;
+            this.btnLoc.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnLoc.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnLoc.FocusedColor = System.Drawing.Color.Empty;
+            this.btnLoc.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoc.ForeColor = System.Drawing.Color.White;
+            this.btnLoc.Image = ((System.Drawing.Image)(resources.GetObject("btnLoc.Image")));
+            this.btnLoc.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnLoc.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnLoc.LineColor = System.Drawing.Color.Red;
+            this.btnLoc.Location = new System.Drawing.Point(906, 87);
+            this.btnLoc.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLoc.Name = "btnLoc";
+            this.btnLoc.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.btnLoc.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(79)))), ((int)(((byte)(109)))));
+            this.btnLoc.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnLoc.OnHoverImage = null;
+            this.btnLoc.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnLoc.OnPressedColor = System.Drawing.Color.Black;
+            this.btnLoc.Radius = 5;
+            this.btnLoc.Size = new System.Drawing.Size(47, 43);
+            this.btnLoc.TabIndex = 53;
+            this.btnLoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnLoc.Click += new System.EventHandler(this.btnLoc_Click);
             // 
             // btnHienThi
             // 
@@ -210,9 +210,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.Controls.Add(this.btnHienThi);
-            this.Controls.Add(this.gunaAdvenceButton1);
+            this.Controls.Add(this.btnLoc);
             this.Controls.Add(this.dtpNgay);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lbDSXuatKho);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Tab4_3QuanLyXuatKho";
             this.Size = new System.Drawing.Size(1083, 804);
@@ -225,10 +225,10 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbDSXuatKho;
         private Guna.UI.WinForms.GunaDataGridView gDGVDon;
         private System.Windows.Forms.DateTimePicker dtpNgay;
-        private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton1;
+        private Guna.UI.WinForms.GunaAdvenceButton btnLoc;
         private Guna.UI.WinForms.GunaAdvenceButton btnHienThi;
     }
 }

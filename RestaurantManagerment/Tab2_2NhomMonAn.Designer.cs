@@ -31,39 +31,39 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbTimKiem = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnXoaNhomMonAn = new System.Windows.Forms.Button();
             this.btnSuaNhomMonAn = new System.Windows.Forms.Button();
             this.btnThemNhomMon = new System.Windows.Forms.Button();
             this.dtgrvDanhSachNhomMon = new Guna.UI.WinForms.GunaDataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.brboxNhomMonAn = new System.Windows.Forms.GroupBox();
+            this.lbTenNhom = new System.Windows.Forms.Label();
+            this.lbMaNhom = new System.Windows.Forms.Label();
             this.txtTenNhom = new System.Windows.Forms.TextBox();
             this.txtMaNhomMon = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvDanhSachNhomMon)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.brboxNhomMonAn.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label9
+            // lbTimKiem
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(411, 283);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 22);
-            this.label9.TabIndex = 90;
-            this.label9.Text = "Tìm Kiếm";
+            this.lbTimKiem.AutoSize = true;
+            this.lbTimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTimKiem.ForeColor = System.Drawing.Color.Black;
+            this.lbTimKiem.Location = new System.Drawing.Point(411, 283);
+            this.lbTimKiem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTimKiem.Name = "lbTimKiem";
+            this.lbTimKiem.Size = new System.Drawing.Size(90, 22);
+            this.lbTimKiem.TabIndex = 90;
+            this.lbTimKiem.Text = "Tìm Kiếm";
             // 
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.ForeColor = System.Drawing.Color.Gray;
             this.txtTimKiem.Location = new System.Drawing.Point(511, 279);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(191, 30);
             this.txtTimKiem.TabIndex = 91;
@@ -76,7 +76,7 @@
             this.btnXoaNhomMonAn.BackColor = System.Drawing.Color.Tomato;
             this.btnXoaNhomMonAn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaNhomMonAn.Location = new System.Drawing.Point(288, 277);
-            this.btnXoaNhomMonAn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoaNhomMonAn.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoaNhomMonAn.Name = "btnXoaNhomMonAn";
             this.btnXoaNhomMonAn.Size = new System.Drawing.Size(107, 34);
             this.btnXoaNhomMonAn.TabIndex = 89;
@@ -89,7 +89,7 @@
             this.btnSuaNhomMonAn.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnSuaNhomMonAn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaNhomMonAn.Location = new System.Drawing.Point(168, 277);
-            this.btnSuaNhomMonAn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSuaNhomMonAn.Margin = new System.Windows.Forms.Padding(4);
             this.btnSuaNhomMonAn.Name = "btnSuaNhomMonAn";
             this.btnSuaNhomMonAn.Size = new System.Drawing.Size(107, 34);
             this.btnSuaNhomMonAn.TabIndex = 88;
@@ -102,7 +102,7 @@
             this.btnThemNhomMon.BackColor = System.Drawing.Color.PaleGreen;
             this.btnThemNhomMon.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemNhomMon.Location = new System.Drawing.Point(45, 277);
-            this.btnThemNhomMon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThemNhomMon.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemNhomMon.Name = "btnThemNhomMon";
             this.btnThemNhomMon.Size = new System.Drawing.Size(107, 34);
             this.btnThemNhomMon.TabIndex = 87;
@@ -174,54 +174,54 @@
             this.dtgrvDanhSachNhomMon.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.DimGray;
             this.dtgrvDanhSachNhomMon.Click += new System.EventHandler(this.dtgrvDanhSachNhomMon_Click);
             // 
-            // groupBox1
+            // brboxNhomMonAn
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(255)))));
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtTenNhom);
-            this.groupBox1.Controls.Add(this.txtMaNhomMon);
-            this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.DarkViolet;
-            this.groupBox1.Location = new System.Drawing.Point(51, 36);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(645, 210);
-            this.groupBox1.TabIndex = 85;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Nhóm Món Ăn";
+            this.brboxNhomMonAn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(255)))));
+            this.brboxNhomMonAn.Controls.Add(this.lbTenNhom);
+            this.brboxNhomMonAn.Controls.Add(this.lbMaNhom);
+            this.brboxNhomMonAn.Controls.Add(this.txtTenNhom);
+            this.brboxNhomMonAn.Controls.Add(this.txtMaNhomMon);
+            this.brboxNhomMonAn.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brboxNhomMonAn.ForeColor = System.Drawing.Color.DarkViolet;
+            this.brboxNhomMonAn.Location = new System.Drawing.Point(51, 36);
+            this.brboxNhomMonAn.Margin = new System.Windows.Forms.Padding(4);
+            this.brboxNhomMonAn.Name = "brboxNhomMonAn";
+            this.brboxNhomMonAn.Padding = new System.Windows.Forms.Padding(4);
+            this.brboxNhomMonAn.Size = new System.Drawing.Size(645, 210);
+            this.brboxNhomMonAn.TabIndex = 85;
+            this.brboxNhomMonAn.TabStop = false;
+            this.brboxNhomMonAn.Text = "Nhóm Món Ăn";
             // 
-            // label3
+            // lbTenNhom
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(63, 144);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 27);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Tên Nhóm";
+            this.lbTenNhom.AutoSize = true;
+            this.lbTenNhom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenNhom.ForeColor = System.Drawing.Color.Black;
+            this.lbTenNhom.Location = new System.Drawing.Point(63, 144);
+            this.lbTenNhom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTenNhom.Name = "lbTenNhom";
+            this.lbTenNhom.Size = new System.Drawing.Size(114, 27);
+            this.lbTenNhom.TabIndex = 6;
+            this.lbTenNhom.Text = "Tên Nhóm";
             // 
-            // label2
+            // lbMaNhom
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(67, 74);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 27);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Mã Nhóm";
+            this.lbMaNhom.AutoSize = true;
+            this.lbMaNhom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaNhom.ForeColor = System.Drawing.Color.Black;
+            this.lbMaNhom.Location = new System.Drawing.Point(67, 74);
+            this.lbMaNhom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbMaNhom.Name = "lbMaNhom";
+            this.lbMaNhom.Size = new System.Drawing.Size(109, 27);
+            this.lbMaNhom.TabIndex = 5;
+            this.lbMaNhom.Text = "Mã Nhóm";
             // 
             // txtTenNhom
             // 
             this.txtTenNhom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTenNhom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenNhom.Location = new System.Drawing.Point(249, 138);
-            this.txtTenNhom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenNhom.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNhom.Name = "txtTenNhom";
             this.txtTenNhom.Size = new System.Drawing.Size(295, 35);
             this.txtTenNhom.TabIndex = 3;
@@ -231,7 +231,7 @@
             this.txtMaNhomMon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaNhomMon.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaNhomMon.Location = new System.Drawing.Point(249, 69);
-            this.txtMaNhomMon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaNhomMon.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaNhomMon.Name = "txtMaNhomMon";
             this.txtMaNhomMon.ReadOnly = true;
             this.txtMaNhomMon.Size = new System.Drawing.Size(295, 35);
@@ -242,20 +242,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lbTimKiem);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnXoaNhomMonAn);
             this.Controls.Add(this.btnSuaNhomMonAn);
             this.Controls.Add(this.btnThemNhomMon);
             this.Controls.Add(this.dtgrvDanhSachNhomMon);
-            this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.brboxNhomMonAn);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Tab2_2NhomMonAn";
             this.Size = new System.Drawing.Size(1087, 756);
             this.Load += new System.EventHandler(this.Tab2_2NhomMonAn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvDanhSachNhomMon)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.brboxNhomMonAn.ResumeLayout(false);
+            this.brboxNhomMonAn.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,15 +263,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnXoaNhomMonAn;
         private System.Windows.Forms.Button btnSuaNhomMonAn;
         private System.Windows.Forms.Button btnThemNhomMon;
         private Guna.UI.WinForms.GunaDataGridView dtgrvDanhSachNhomMon;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox brboxNhomMonAn;
+        private System.Windows.Forms.Label lbTenNhom;
+        private System.Windows.Forms.Label lbMaNhom;
         private System.Windows.Forms.TextBox txtTenNhom;
         private System.Windows.Forms.TextBox txtMaNhomMon;
     }

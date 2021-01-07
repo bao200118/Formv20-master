@@ -16,6 +16,7 @@ namespace RestaurantManagerment
 {
     public partial class Tab2_2NhomMonAn : UserControl
     {
+        internal string TKDN;
         public Tab2_2NhomMonAn()
         {
             InitializeComponent();
@@ -79,6 +80,9 @@ namespace RestaurantManagerment
             }
             if (NhomMonAn_BUS.ThemNhomMonAn(nhomMonAn))
             {
+                drNhomMonAn = null;
+                txtMaNhomMon.Text = "";
+                txtTenNhom.Text = "";
                 LoadNhomMonAn();
                 MessageBox.Show("Thêm thành công");
                 return;
@@ -106,54 +110,68 @@ namespace RestaurantManagerment
         //Sửa Nhóm Món Ăn
         private void btnSuaNhomMonAn_Click(object sender, EventArgs e)
         {
-            if (drNhomMonAn == null)
+            if (TKDN.Substring(0, 2) == "NV")
             {
-                MessageBox.Show("Chọn Nhóm Món Ăn Muốn Sửa");
-                return;
+                MessageBox.Show("Chỉ có chức vụ quản lý mới được sử dụng chức năng này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-            NhomMonAn_DTO nhomMonAn = new NhomMonAn_DTO();
-
-            nhomMonAn.MaNhomMonAn = drNhomMonAn.Cells["MaNhomMonAn"].Value.ToString();
-            nhomMonAn.TenNhomMonAn = txtTenNhom.Text;
-            if (NhomMonAn_BUS.SuaNhomMonAn(nhomMonAn))
+            else
             {
+                if (drNhomMonAn == null)
+                {
+                    MessageBox.Show("Chọn Nhóm Món Ăn Muốn Sửa");
+                    return;
+                }
 
-                drNhomMonAn = null;
-                txtMaNhomMon.Text = "";
-                txtTenNhom.Text = "";
-                LoadNhomMonAn();
-                MessageBox.Show("Sửa thành công");
-                return;
+                NhomMonAn_DTO nhomMonAn = new NhomMonAn_DTO();
+
+                nhomMonAn.MaNhomMonAn = drNhomMonAn.Cells["MaNhomMonAn"].Value.ToString();
+                nhomMonAn.TenNhomMonAn = txtTenNhom.Text;
+                if (NhomMonAn_BUS.SuaNhomMonAn(nhomMonAn))
+                {
+
+                    drNhomMonAn = null;
+                    txtMaNhomMon.Text = "";
+                    txtTenNhom.Text = "";
+                    LoadNhomMonAn();
+                    MessageBox.Show("Sửa thành công");
+                    return;
+                }
+                MessageBox.Show("Sửa thất bại");
             }
-            MessageBox.Show("Sửa thất bại");
         }
 
         // Xóa nhóm Món ăn 
         private void btnXoaNhomMonAn_Click(object sender, EventArgs e)
         {
-            if (drNhomMonAn == null)
+            if (TKDN.Substring(0, 2) == "NV")
             {
-                MessageBox.Show("Chọn Nhóm Món Ăn Muốn Xóa");
-                return;
+                MessageBox.Show("Chỉ có chức vụ quản lý mới được sử dụng chức năng này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            NhomMonAn_DTO nhomMonAnXoa = new NhomMonAn_DTO();
-            nhomMonAnXoa.MaNhomMonAn = txtMaNhomMon.Text;
-
-            if (MessageBox.Show("Bạn có chắc chắn muốn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            else
             {
-                if (danhSachNhomMonAn == null)
-                    dtgrvDanhSachNhomMon.DataSource = null;
-                if (NhomMonAn_BUS.XoaNhomMonAn(nhomMonAnXoa))
+                if (drNhomMonAn == null)
                 {
-                    drNhomMonAn = null;
-                    txtMaNhomMon.Text = "";
-                    txtTenNhom.Text = "";
-                    MessageBox.Show("Xóa thành công");
-                    LoadNhomMonAn();
+                    MessageBox.Show("Chọn Nhóm Món Ăn Muốn Xóa");
                     return;
                 }
-                MessageBox.Show("Xóa thất bại");
+                NhomMonAn_DTO nhomMonAnXoa = new NhomMonAn_DTO();
+                nhomMonAnXoa.MaNhomMonAn = txtMaNhomMon.Text;
+
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    if (danhSachNhomMonAn == null)
+                        dtgrvDanhSachNhomMon.DataSource = null;
+                    if (NhomMonAn_BUS.XoaNhomMonAn(nhomMonAnXoa))
+                    {
+                        drNhomMonAn = null;
+                        txtMaNhomMon.Text = "";
+                        txtTenNhom.Text = "";
+                        MessageBox.Show("Xóa thành công");
+                        LoadNhomMonAn();
+                        return;
+                    }
+                    MessageBox.Show("Xóa thất bại");
+                }
             }
         }
 

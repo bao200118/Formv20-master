@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnControlTabCon = new System.Windows.Forms.Panel();
             this.btnThongTinBan = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnSoDoBan = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnTabCon = new System.Windows.Forms.Panel();
             this.tab1_1_2ThongTinBan1 = new RestaurantManagerment.tab1_2ThongTinBan();
             this.tab1_1_1BanAn1 = new RestaurantManagerment.Tab1_1BanAn();
-            this.panel1.SuspendLayout();
+            this.pnControlTabCon.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnControlTabCon
             // 
-            this.panel1.BackColor = System.Drawing.Color.Linen;
-            this.panel1.Controls.Add(this.btnThongTinBan);
-            this.panel1.Controls.Add(this.btnSoDoBan);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1091, 46);
-            this.panel1.TabIndex = 69;
+            this.pnControlTabCon.BackColor = System.Drawing.Color.Linen;
+            this.pnControlTabCon.Controls.Add(this.btnThongTinBan);
+            this.pnControlTabCon.Controls.Add(this.btnSoDoBan);
+            this.pnControlTabCon.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnControlTabCon.Location = new System.Drawing.Point(0, 0);
+            this.pnControlTabCon.Margin = new System.Windows.Forms.Padding(4);
+            this.pnControlTabCon.Name = "pnControlTabCon";
+            this.pnControlTabCon.Size = new System.Drawing.Size(1091, 46);
+            this.pnControlTabCon.TabIndex = 69;
             // 
             // btnThongTinBan
             // 
@@ -126,14 +126,14 @@
             this.btnSoDoBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSoDoBan.Click += new System.EventHandler(this.btnSoDoBan_Click);
             // 
-            // panel2
+            // pnTabCon
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 46);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1091, 758);
-            this.panel2.TabIndex = 70;
+            this.pnTabCon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnTabCon.Location = new System.Drawing.Point(0, 46);
+            this.pnTabCon.Margin = new System.Windows.Forms.Padding(4);
+            this.pnTabCon.Name = "pnTabCon";
+            this.pnTabCon.Size = new System.Drawing.Size(1091, 758);
+            this.pnTabCon.TabIndex = 70;
             // 
             // tab1_1_2ThongTinBan1
             // 
@@ -159,24 +159,24 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnTabCon);
+            this.Controls.Add(this.pnControlTabCon);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Tab1";
             this.Size = new System.Drawing.Size(1091, 804);
             this.Load += new System.EventHandler(this.Tab1_1_Load);
             this.Enter += new System.EventHandler(this.Tab1_Enter);
-            this.panel1.ResumeLayout(false);
+            this.pnControlTabCon.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnControlTabCon;
         private Guna.UI.WinForms.GunaAdvenceButton btnThongTinBan;
         private Guna.UI.WinForms.GunaAdvenceButton btnSoDoBan;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnTabCon;
         private Tab1_1BanAn tab1_1_1BanAn1;
         private tab1_2ThongTinBan tab1_1_2ThongTinBan1;
     }

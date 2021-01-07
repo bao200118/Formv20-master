@@ -28,7 +28,7 @@ namespace RestaurantManagerment
         }
         private void BatBieuDo()
         {
-            label1.Visible = true;
+            lbBieuDo.Visible = true;
             lbTK.Visible = true;
             chartDoanhThu.Visible = true;
             cbNam.Visible = true;
@@ -145,7 +145,7 @@ namespace RestaurantManagerment
         {
             KieuTK = "Ngay";
             lbDTNum.Text = "Chưa có dữ liệu";
-            label1.Visible = false;
+            lbBieuDo.Visible = false;
             lbTK.Visible = false;
             chartDoanhThu.Visible = false;
             cbNam.Visible = false;
@@ -156,7 +156,7 @@ namespace RestaurantManagerment
 
         private void Tab5_Load(object sender, EventArgs e)
         {
-            label1.Visible = false;
+            lbBieuDo.Visible = false;
             lbTK.Visible = false;
             chartDoanhThu.Visible = false;
             cbNam.Visible = false;

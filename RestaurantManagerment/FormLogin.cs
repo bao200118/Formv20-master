@@ -51,11 +51,13 @@ namespace RestaurantManagerment
         private void button1_Click_1(object sender, EventArgs e)
         {
             //Lấy file path mà chương trình chạy(VD:C:\...\bai1\bin\debug
-            var CurrentDirectory = System.Environment.CurrentDirectory;
-            //Lấy file path đã bỏ đi bin\debug -> Đây là địa chỉ của toàn bộ project
-            string CurrentProjectD = Directory.GetParent(CurrentDirectory).Parent.FullName;
-            //Ghép địa chỉ của toàn bộ project với thư mục chứa file database SQLite để kết nối SQLite      
-            using (SQLiteConnection con = new SQLiteConnection(@"Data Source=" + CurrentProjectD + @"\Database\NHAHANG.db;"))
+            string CurrentDirectory = System.Environment.CurrentDirectory;
+            while (CurrentDirectory.Contains("bin"))
+            {
+                CurrentDirectory = Directory.GetParent(CurrentDirectory).FullName;
+            }
+            CurrentDirectory = @"Data Source=" + CurrentDirectory + @"\NHAHANG.db;";
+            using (SQLiteConnection con = new SQLiteConnection(CurrentDirectory))
             {
                 try
                 {

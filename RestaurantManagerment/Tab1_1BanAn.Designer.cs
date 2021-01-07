@@ -30,32 +30,32 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tab1_1BanAn));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label2 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.lbNgaytxt = new System.Windows.Forms.Label();
             this.btnMoBan = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbBantxt = new System.Windows.Forms.Label();
+            this.lbTrangThaitxt = new System.Windows.Forms.Label();
             this.lbTrangThai = new System.Windows.Forms.Label();
             this.lbBan = new System.Windows.Forms.Label();
             this.PanelKhuyenMai = new Guna.UI.WinForms.GunaPanel();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.lbTongTienDV = new Guna.UI.WinForms.GunaLabel();
             this.txtKhuyenMaiPhanTram = new System.Windows.Forms.TextBox();
             this.txtKhuyenMaiVND = new System.Windows.Forms.TextBox();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.KMSo = new Guna.UI.WinForms.GunaLabel();
-            this.KMPhanTram = new Guna.UI.WinForms.GunaLabel();
+            this.lbKMtxtPhanTram = new Guna.UI.WinForms.GunaLabel();
+            this.lbKMtxtDong = new Guna.UI.WinForms.GunaLabel();
+            this.lbKMSoDV = new Guna.UI.WinForms.GunaLabel();
+            this.lbKMPhanTram = new Guna.UI.WinForms.GunaLabel();
             this.lbTongTienThanhToan = new Guna.UI.WinForms.GunaLabel();
-            this.TTKMText = new Guna.UI.WinForms.GunaLabel();
+            this.txtTTKM = new Guna.UI.WinForms.GunaLabel();
             this.PanelTongTienThanhToan = new Guna.UI.WinForms.GunaPanel();
-            this.LoaiTienTeText = new Guna.UI.WinForms.GunaLabel();
+            this.lbThanhTienDV = new Guna.UI.WinForms.GunaLabel();
             this.lbThanhTien = new Guna.UI.WinForms.GunaLabel();
             this.TongTienText = new Guna.UI.WinForms.GunaLabel();
             this.ButtonThanhToan = new Guna.UI.WinForms.GunaAdvenceButton();
             this.PanelDSHoaDon = new Guna.UI.WinForms.GunaGradient2Panel();
-            this.LabelDSHoaDon = new Guna.UI.WinForms.GunaLabel();
+            this.lbDSHoaDon = new Guna.UI.WinForms.GunaLabel();
             this.PanelHoaDon = new Guna.UI.WinForms.GunaPanel();
             this.btnchuyenBan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnXoaMonAn = new Guna.UI.WinForms.GunaCircleButton();
@@ -83,16 +83,16 @@
             this.panelOrderMon.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label2
+            // lbNgaytxt
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(339, 27);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 20);
-            this.label2.TabIndex = 58;
-            this.label2.Text = "Ngày: ";
+            this.lbNgaytxt.AutoSize = true;
+            this.lbNgaytxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNgaytxt.Location = new System.Drawing.Point(339, 27);
+            this.lbNgaytxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNgaytxt.Name = "lbNgaytxt";
+            this.lbNgaytxt.Size = new System.Drawing.Size(63, 20);
+            this.lbNgaytxt.TabIndex = 58;
+            this.lbNgaytxt.Text = "Ngày: ";
             // 
             // btnMoBan
             // 
@@ -131,27 +131,27 @@
             this.btnMoBan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMoBan.Click += new System.EventHandler(this.btnMoBan_Click);
             // 
-            // label3
+            // lbBantxt
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(352, 63);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 20);
-            this.label3.TabIndex = 60;
-            this.label3.Text = "Bàn: ";
+            this.lbBantxt.AutoSize = true;
+            this.lbBantxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBantxt.Location = new System.Drawing.Point(352, 63);
+            this.lbBantxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbBantxt.Name = "lbBantxt";
+            this.lbBantxt.Size = new System.Drawing.Size(54, 20);
+            this.lbBantxt.TabIndex = 60;
+            this.lbBantxt.Text = "Bàn: ";
             // 
-            // label4
+            // lbTrangThaitxt
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(287, 96);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 20);
-            this.label4.TabIndex = 61;
-            this.label4.Text = "Trạng Thái: ";
+            this.lbTrangThaitxt.AutoSize = true;
+            this.lbTrangThaitxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTrangThaitxt.Location = new System.Drawing.Point(287, 96);
+            this.lbTrangThaitxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTrangThaitxt.Name = "lbTrangThaitxt";
+            this.lbTrangThaitxt.Size = new System.Drawing.Size(111, 20);
+            this.lbTrangThaitxt.TabIndex = 61;
+            this.lbTrangThaitxt.Text = "Trạng Thái: ";
             // 
             // lbTrangThai
             // 
@@ -181,32 +181,32 @@
             // 
             this.PanelKhuyenMai.AutoSize = true;
             this.PanelKhuyenMai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
-            this.PanelKhuyenMai.Controls.Add(this.gunaLabel3);
+            this.PanelKhuyenMai.Controls.Add(this.lbTongTienDV);
             this.PanelKhuyenMai.Controls.Add(this.txtKhuyenMaiPhanTram);
             this.PanelKhuyenMai.Controls.Add(this.txtKhuyenMaiVND);
-            this.PanelKhuyenMai.Controls.Add(this.gunaLabel2);
-            this.PanelKhuyenMai.Controls.Add(this.gunaLabel1);
-            this.PanelKhuyenMai.Controls.Add(this.KMSo);
-            this.PanelKhuyenMai.Controls.Add(this.KMPhanTram);
+            this.PanelKhuyenMai.Controls.Add(this.lbKMtxtPhanTram);
+            this.PanelKhuyenMai.Controls.Add(this.lbKMtxtDong);
+            this.PanelKhuyenMai.Controls.Add(this.lbKMSoDV);
+            this.PanelKhuyenMai.Controls.Add(this.lbKMPhanTram);
             this.PanelKhuyenMai.Controls.Add(this.lbTongTienThanhToan);
-            this.PanelKhuyenMai.Controls.Add(this.TTKMText);
+            this.PanelKhuyenMai.Controls.Add(this.txtTTKM);
             this.PanelKhuyenMai.Location = new System.Drawing.Point(0, 406);
             this.PanelKhuyenMai.Margin = new System.Windows.Forms.Padding(4);
             this.PanelKhuyenMai.Name = "PanelKhuyenMai";
             this.PanelKhuyenMai.Size = new System.Drawing.Size(371, 113);
             this.PanelKhuyenMai.TabIndex = 43;
             // 
-            // gunaLabel3
+            // lbTongTienDV
             // 
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(79)))), ((int)(((byte)(109)))));
-            this.gunaLabel3.Location = new System.Drawing.Point(304, 15);
-            this.gunaLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(47, 20);
-            this.gunaLabel3.TabIndex = 42;
-            this.gunaLabel3.Text = "Đồng";
+            this.lbTongTienDV.AutoSize = true;
+            this.lbTongTienDV.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTongTienDV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(79)))), ((int)(((byte)(109)))));
+            this.lbTongTienDV.Location = new System.Drawing.Point(304, 15);
+            this.lbTongTienDV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTongTienDV.Name = "lbTongTienDV";
+            this.lbTongTienDV.Size = new System.Drawing.Size(47, 20);
+            this.lbTongTienDV.TabIndex = 42;
+            this.lbTongTienDV.Text = "Đồng";
             // 
             // txtKhuyenMaiPhanTram
             // 
@@ -234,53 +234,53 @@
             this.txtKhuyenMaiVND.TextChanged += new System.EventHandler(this.txtKhuyenMaiVND_TextChanged);
             this.txtKhuyenMaiVND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKhuyenMaiVND_KeyPress);
             // 
-            // gunaLabel2
+            // lbKMtxtPhanTram
             // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel2.Location = new System.Drawing.Point(19, 81);
-            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(91, 20);
-            this.gunaLabel2.TabIndex = 39;
-            this.gunaLabel2.Text = "Khuyến Mãi";
+            this.lbKMtxtPhanTram.AutoSize = true;
+            this.lbKMtxtPhanTram.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbKMtxtPhanTram.ForeColor = System.Drawing.Color.Gray;
+            this.lbKMtxtPhanTram.Location = new System.Drawing.Point(19, 81);
+            this.lbKMtxtPhanTram.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbKMtxtPhanTram.Name = "lbKMtxtPhanTram";
+            this.lbKMtxtPhanTram.Size = new System.Drawing.Size(91, 20);
+            this.lbKMtxtPhanTram.TabIndex = 39;
+            this.lbKMtxtPhanTram.Text = "Khuyến Mãi";
             // 
-            // gunaLabel1
+            // lbKMtxtDong
             // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel1.Location = new System.Drawing.Point(19, 48);
-            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(91, 20);
-            this.gunaLabel1.TabIndex = 38;
-            this.gunaLabel1.Text = "Khuyến Mãi";
+            this.lbKMtxtDong.AutoSize = true;
+            this.lbKMtxtDong.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbKMtxtDong.ForeColor = System.Drawing.Color.Gray;
+            this.lbKMtxtDong.Location = new System.Drawing.Point(19, 48);
+            this.lbKMtxtDong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbKMtxtDong.Name = "lbKMtxtDong";
+            this.lbKMtxtDong.Size = new System.Drawing.Size(91, 20);
+            this.lbKMtxtDong.TabIndex = 38;
+            this.lbKMtxtDong.Text = "Khuyến Mãi";
             // 
-            // KMSo
+            // lbKMSoDV
             // 
-            this.KMSo.AutoSize = true;
-            this.KMSo.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KMSo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(79)))), ((int)(((byte)(109)))));
-            this.KMSo.Location = new System.Drawing.Point(303, 44);
-            this.KMSo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.KMSo.Name = "KMSo";
-            this.KMSo.Size = new System.Drawing.Size(47, 20);
-            this.KMSo.TabIndex = 37;
-            this.KMSo.Text = "Đồng";
+            this.lbKMSoDV.AutoSize = true;
+            this.lbKMSoDV.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbKMSoDV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(79)))), ((int)(((byte)(109)))));
+            this.lbKMSoDV.Location = new System.Drawing.Point(303, 44);
+            this.lbKMSoDV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbKMSoDV.Name = "lbKMSoDV";
+            this.lbKMSoDV.Size = new System.Drawing.Size(47, 20);
+            this.lbKMSoDV.TabIndex = 37;
+            this.lbKMSoDV.Text = "Đồng";
             // 
-            // KMPhanTram
+            // lbKMPhanTram
             // 
-            this.KMPhanTram.AutoSize = true;
-            this.KMPhanTram.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KMPhanTram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(79)))), ((int)(((byte)(109)))));
-            this.KMPhanTram.Location = new System.Drawing.Point(305, 76);
-            this.KMPhanTram.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.KMPhanTram.Name = "KMPhanTram";
-            this.KMPhanTram.Size = new System.Drawing.Size(22, 20);
-            this.KMPhanTram.TabIndex = 36;
-            this.KMPhanTram.Text = "%";
+            this.lbKMPhanTram.AutoSize = true;
+            this.lbKMPhanTram.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbKMPhanTram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(79)))), ((int)(((byte)(109)))));
+            this.lbKMPhanTram.Location = new System.Drawing.Point(305, 76);
+            this.lbKMPhanTram.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbKMPhanTram.Name = "lbKMPhanTram";
+            this.lbKMPhanTram.Size = new System.Drawing.Size(22, 20);
+            this.lbKMPhanTram.TabIndex = 36;
+            this.lbKMPhanTram.Text = "%";
             // 
             // lbTongTienThanhToan
             // 
@@ -294,23 +294,23 @@
             this.lbTongTienThanhToan.TabIndex = 33;
             this.lbTongTienThanhToan.Text = "0";
             // 
-            // TTKMText
+            // txtTTKM
             // 
-            this.TTKMText.AutoSize = true;
-            this.TTKMText.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TTKMText.ForeColor = System.Drawing.Color.Gray;
-            this.TTKMText.Location = new System.Drawing.Point(16, 12);
-            this.TTKMText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.TTKMText.Name = "TTKMText";
-            this.TTKMText.Size = new System.Drawing.Size(77, 20);
-            this.TTKMText.TabIndex = 32;
-            this.TTKMText.Text = "Tổng Tiền";
+            this.txtTTKM.AutoSize = true;
+            this.txtTTKM.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTTKM.ForeColor = System.Drawing.Color.Gray;
+            this.txtTTKM.Location = new System.Drawing.Point(16, 12);
+            this.txtTTKM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtTTKM.Name = "txtTTKM";
+            this.txtTTKM.Size = new System.Drawing.Size(77, 20);
+            this.txtTTKM.TabIndex = 32;
+            this.txtTTKM.Text = "Tổng Tiền";
             // 
             // PanelTongTienThanhToan
             // 
             this.PanelTongTienThanhToan.AutoSize = true;
             this.PanelTongTienThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
-            this.PanelTongTienThanhToan.Controls.Add(this.LoaiTienTeText);
+            this.PanelTongTienThanhToan.Controls.Add(this.lbThanhTienDV);
             this.PanelTongTienThanhToan.Controls.Add(this.lbThanhTien);
             this.PanelTongTienThanhToan.Controls.Add(this.TongTienText);
             this.PanelTongTienThanhToan.Location = new System.Drawing.Point(1, 521);
@@ -319,17 +319,17 @@
             this.PanelTongTienThanhToan.Size = new System.Drawing.Size(361, 89);
             this.PanelTongTienThanhToan.TabIndex = 38;
             // 
-            // LoaiTienTeText
+            // lbThanhTienDV
             // 
-            this.LoaiTienTeText.AutoSize = true;
-            this.LoaiTienTeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoaiTienTeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(79)))), ((int)(((byte)(109)))));
-            this.LoaiTienTeText.Location = new System.Drawing.Point(293, 33);
-            this.LoaiTienTeText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LoaiTienTeText.Name = "LoaiTienTeText";
-            this.LoaiTienTeText.Size = new System.Drawing.Size(48, 18);
-            this.LoaiTienTeText.TabIndex = 40;
-            this.LoaiTienTeText.Text = "Đồng";
+            this.lbThanhTienDV.AutoSize = true;
+            this.lbThanhTienDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThanhTienDV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(79)))), ((int)(((byte)(109)))));
+            this.lbThanhTienDV.Location = new System.Drawing.Point(293, 33);
+            this.lbThanhTienDV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbThanhTienDV.Name = "lbThanhTienDV";
+            this.lbThanhTienDV.Size = new System.Drawing.Size(48, 18);
+            this.lbThanhTienDV.TabIndex = 40;
+            this.lbThanhTienDV.Text = "Đồng";
             // 
             // lbThanhTien
             // 
@@ -395,26 +395,26 @@
             // 
             this.PanelDSHoaDon.AutoSize = true;
             this.PanelDSHoaDon.BackColor = System.Drawing.Color.Transparent;
-            this.PanelDSHoaDon.Controls.Add(this.LabelDSHoaDon);
-            this.PanelDSHoaDon.GradientColor1 = System.Drawing.Color.SlateBlue;
-            this.PanelDSHoaDon.GradientColor2 = System.Drawing.Color.CornflowerBlue;
+            this.PanelDSHoaDon.Controls.Add(this.lbDSHoaDon);
+            this.PanelDSHoaDon.GradientColor1 = System.Drawing.Color.DarkOrchid;
+            this.PanelDSHoaDon.GradientColor2 = System.Drawing.Color.MediumOrchid;
             this.PanelDSHoaDon.Location = new System.Drawing.Point(0, 0);
             this.PanelDSHoaDon.Margin = new System.Windows.Forms.Padding(4);
             this.PanelDSHoaDon.Name = "PanelDSHoaDon";
             this.PanelDSHoaDon.Size = new System.Drawing.Size(364, 97);
             this.PanelDSHoaDon.TabIndex = 47;
             // 
-            // LabelDSHoaDon
+            // lbDSHoaDon
             // 
-            this.LabelDSHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDSHoaDon.ForeColor = System.Drawing.Color.White;
-            this.LabelDSHoaDon.Location = new System.Drawing.Point(1, 30);
-            this.LabelDSHoaDon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LabelDSHoaDon.Name = "LabelDSHoaDon";
-            this.LabelDSHoaDon.Size = new System.Drawing.Size(352, 39);
-            this.LabelDSHoaDon.TabIndex = 7;
-            this.LabelDSHoaDon.Text = "Danh sách hóa đơn";
-            this.LabelDSHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbDSHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDSHoaDon.ForeColor = System.Drawing.Color.White;
+            this.lbDSHoaDon.Location = new System.Drawing.Point(1, 30);
+            this.lbDSHoaDon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbDSHoaDon.Name = "lbDSHoaDon";
+            this.lbDSHoaDon.Size = new System.Drawing.Size(352, 39);
+            this.lbDSHoaDon.TabIndex = 7;
+            this.lbDSHoaDon.Text = "Danh sách hóa đơn";
+            this.lbDSHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PanelHoaDon
             // 
@@ -552,35 +552,35 @@
             this.dgvHoaDonOrder.AllowUserToDeleteRows = false;
             this.dgvHoaDonOrder.AllowUserToResizeColumns = false;
             this.dgvHoaDonOrder.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvHoaDonOrder.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvHoaDonOrder.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHoaDonOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHoaDonOrder.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvHoaDonOrder.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvHoaDonOrder.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvHoaDonOrder.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHoaDonOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHoaDonOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHoaDonOrder.ColumnHeadersHeight = 21;
             this.dgvHoaDonOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHoaDonOrder.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHoaDonOrder.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvHoaDonOrder.EnableHeadersVisualStyles = false;
             this.dgvHoaDonOrder.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvHoaDonOrder.Location = new System.Drawing.Point(0, 92);
@@ -785,10 +785,10 @@
             this.Controls.Add(this.lbNgay);
             this.Controls.Add(this.lbTrangThai);
             this.Controls.Add(this.lbBan);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbTrangThaitxt);
+            this.Controls.Add(this.lbBantxt);
             this.Controls.Add(this.btnMoBan);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbNgaytxt);
             this.Controls.Add(this.PanelHoaDon);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Tab1_1BanAn";
@@ -810,26 +810,26 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbNgaytxt;
         private Bunifu.Framework.UI.BunifuFlatButton btnMoBan;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbBantxt;
+        private System.Windows.Forms.Label lbTrangThaitxt;
         //private System.Windows.Forms.FlowLayoutPanel flpSoDoBan;
         private System.Windows.Forms.Label lbTrangThai;
         private System.Windows.Forms.Label lbBan;
         private Guna.UI.WinForms.GunaPanel PanelHoaDon;
         private Guna.UI.WinForms.GunaGradient2Panel PanelDSHoaDon;
-        private Guna.UI.WinForms.GunaLabel LabelDSHoaDon;
+        private Guna.UI.WinForms.GunaLabel lbDSHoaDon;
         private Guna.UI.WinForms.GunaAdvenceButton ButtonThanhToan;
         private Guna.UI.WinForms.GunaPanel PanelTongTienThanhToan;
-        private Guna.UI.WinForms.GunaLabel LoaiTienTeText;
+        private Guna.UI.WinForms.GunaLabel lbThanhTienDV;
         private Guna.UI.WinForms.GunaLabel lbThanhTien;
         private Guna.UI.WinForms.GunaLabel TongTienText;
         private Guna.UI.WinForms.GunaPanel PanelKhuyenMai;
-        private Guna.UI.WinForms.GunaLabel KMSo;
-        private Guna.UI.WinForms.GunaLabel KMPhanTram;
+        private Guna.UI.WinForms.GunaLabel lbKMSoDV;
+        private Guna.UI.WinForms.GunaLabel lbKMPhanTram;
         private Guna.UI.WinForms.GunaLabel lbTongTienThanhToan;
-        private Guna.UI.WinForms.GunaLabel TTKMText;
+        private Guna.UI.WinForms.GunaLabel txtTTKM;
         private System.Windows.Forms.Label lbNgay;
         private System.Windows.Forms.ListView listBanAn;
         private System.Windows.Forms.ImageList imgList;
@@ -839,9 +839,9 @@
         private System.Windows.Forms.Button btnQuayLai;
         private System.Windows.Forms.TextBox txtKhuyenMaiPhanTram;
         private System.Windows.Forms.TextBox txtKhuyenMaiVND;
-        private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private Guna.UI.WinForms.GunaLabel gunaLabel1;
-        private Guna.UI.WinForms.GunaLabel gunaLabel3;
+        private Guna.UI.WinForms.GunaLabel lbKMtxtPhanTram;
+        private Guna.UI.WinForms.GunaLabel lbKMtxtDong;
+        private Guna.UI.WinForms.GunaLabel lbTongTienDV;
         private Guna.UI.WinForms.GunaDataGridView dgvHoaDonOrder;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

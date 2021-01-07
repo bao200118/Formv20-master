@@ -50,7 +50,7 @@ namespace RestaurantManagerment
             LoadDon();
         }
 
-        private void gunaAdvenceButton1_Click(object sender, EventArgs e)
+        private void btnLoc_Click(object sender, EventArgs e)
         {
             dsDon = DonTKNguyenLieu_BUS.LoadDon(dtpNgay.Value.ToString("dd/MM/yyyy"));
             gDGVDon.DataSource = dsDon;

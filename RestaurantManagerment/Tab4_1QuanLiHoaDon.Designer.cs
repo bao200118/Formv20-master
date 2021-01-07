@@ -33,8 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tab4_1QuanLiHoaDon));
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbDenNgay = new System.Windows.Forms.Label();
+            this.lbTuNgay = new System.Windows.Forms.Label();
             this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
             this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
             this.dgvDanhSachHoaDon = new Guna.UI.WinForms.GunaDataGridView();
@@ -57,29 +57,29 @@
             this.label3.TabIndex = 19;
             this.label3.Text = "Danh Sách Hóa Đơn";
             // 
-            // label2
+            // lbDenNgay
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(255)))));
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(499, 110);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 22);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Đến Ngày";
+            this.lbDenNgay.AutoSize = true;
+            this.lbDenNgay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(255)))));
+            this.lbDenNgay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDenNgay.Location = new System.Drawing.Point(499, 110);
+            this.lbDenNgay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbDenNgay.Name = "lbDenNgay";
+            this.lbDenNgay.Size = new System.Drawing.Size(88, 22);
+            this.lbDenNgay.TabIndex = 14;
+            this.lbDenNgay.Text = "Đến Ngày";
             // 
-            // label1
+            // lbTuNgay
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(255)))));
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(195, 110);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 22);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Từ Ngày";
+            this.lbTuNgay.AutoSize = true;
+            this.lbTuNgay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(255)))));
+            this.lbTuNgay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTuNgay.Location = new System.Drawing.Point(195, 110);
+            this.lbTuNgay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTuNgay.Name = "lbTuNgay";
+            this.lbTuNgay.Size = new System.Drawing.Size(79, 22);
+            this.lbTuNgay.TabIndex = 13;
+            this.lbTuNgay.Text = "Từ Ngày";
             // 
             // dtpDenNgay
             // 
@@ -324,8 +324,8 @@
             this.Controls.Add(this.btnHienThi);
             this.Controls.Add(this.btnLoc);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbDenNgay);
+            this.Controls.Add(this.lbTuNgay);
             this.Controls.Add(this.dtpDenNgay);
             this.Controls.Add(this.dtpTuNgay);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -341,8 +341,8 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbDenNgay;
+        private System.Windows.Forms.Label lbTuNgay;
         private System.Windows.Forms.DateTimePicker dtpDenNgay;
         private System.Windows.Forms.DateTimePicker dtpTuNgay;
         private Guna.UI.WinForms.GunaDataGridView dgvDanhSachHoaDon;

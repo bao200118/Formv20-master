@@ -29,44 +29,44 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTKKho));
-            this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnTK = new Guna.UI.WinForms.GunaShadowPanel();
+            this.pnTKPicture = new System.Windows.Forms.Panel();
             this.btnOK = new Guna.UI.WinForms.GunaAdvenceButton();
             this.flplistNL = new System.Windows.Forms.FlowLayoutPanel();
             this.btnClose = new Guna.UI.WinForms.GunaCircleButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.gunaShadowPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.lbTK = new System.Windows.Forms.Label();
+            this.pnTK.SuspendLayout();
+            this.pnTKPicture.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gunaShadowPanel1
+            // pnTK
             // 
-            this.gunaShadowPanel1.BackColor = System.Drawing.Color.DarkGray;
-            this.gunaShadowPanel1.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.gunaShadowPanel1.Controls.Add(this.panel1);
-            this.gunaShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaShadowPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gunaShadowPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.gunaShadowPanel1.Name = "gunaShadowPanel1";
-            this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Crimson;
-            this.gunaShadowPanel1.Size = new System.Drawing.Size(694, 424);
-            this.gunaShadowPanel1.TabIndex = 0;
+            this.pnTK.BackColor = System.Drawing.Color.DarkGray;
+            this.pnTK.BaseColor = System.Drawing.Color.White;
+            this.pnTK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnTK.Controls.Add(this.pnTKPicture);
+            this.pnTK.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnTK.Location = new System.Drawing.Point(0, 0);
+            this.pnTK.Margin = new System.Windows.Forms.Padding(4);
+            this.pnTK.Name = "pnTK";
+            this.pnTK.ShadowColor = System.Drawing.Color.Crimson;
+            this.pnTK.Size = new System.Drawing.Size(694, 424);
+            this.pnTK.TabIndex = 0;
             // 
-            // panel1
+            // pnTKPicture
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.btnOK);
-            this.panel1.Controls.Add(this.flplistNL);
-            this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(5, 5);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(683, 413);
-            this.panel1.TabIndex = 0;
+            this.pnTKPicture.BackColor = System.Drawing.Color.DarkGray;
+            this.pnTKPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnTKPicture.BackgroundImage")));
+            this.pnTKPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnTKPicture.Controls.Add(this.btnOK);
+            this.pnTKPicture.Controls.Add(this.flplistNL);
+            this.pnTKPicture.Controls.Add(this.btnClose);
+            this.pnTKPicture.Controls.Add(this.lbTK);
+            this.pnTKPicture.Location = new System.Drawing.Point(5, 5);
+            this.pnTKPicture.Margin = new System.Windows.Forms.Padding(4);
+            this.pnTKPicture.Name = "pnTKPicture";
+            this.pnTKPicture.Size = new System.Drawing.Size(683, 413);
+            this.pnTKPicture.TabIndex = 0;
             // 
             // btnOK
             // 
@@ -117,6 +117,7 @@
             // 
             this.btnClose.AnimationHoverSpeed = 0.07F;
             this.btnClose.AnimationSpeed = 0.03F;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
             this.btnClose.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.btnClose.BorderColor = System.Drawing.Color.Black;
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -125,7 +126,7 @@
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnClose.Location = new System.Drawing.Point(648, 7);
+            this.btnClose.Location = new System.Drawing.Point(652, 4);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -137,18 +138,18 @@
             this.btnClose.TabIndex = 6;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // label1
+            // lbTK
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(109, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(482, 31);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Thống kê số lượng nguyên liệu dùng";
+            this.lbTK.AutoSize = true;
+            this.lbTK.BackColor = System.Drawing.Color.Transparent;
+            this.lbTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTK.ForeColor = System.Drawing.SystemColors.Info;
+            this.lbTK.Location = new System.Drawing.Point(109, 33);
+            this.lbTK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTK.Name = "lbTK";
+            this.lbTK.Size = new System.Drawing.Size(482, 31);
+            this.lbTK.TabIndex = 4;
+            this.lbTK.Text = "Thống kê số lượng nguyên liệu dùng";
             // 
             // FormTKKho
             // 
@@ -156,7 +157,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(694, 424);
-            this.Controls.Add(this.gunaShadowPanel1);
+            this.Controls.Add(this.pnTK);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(507, 123);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -168,19 +169,19 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormChuyenBan";
             this.Load += new System.EventHandler(this.FormTKKho_Load);
-            this.gunaShadowPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnTK.ResumeLayout(false);
+            this.pnTKPicture.ResumeLayout(false);
+            this.pnTKPicture.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel1;
-        private System.Windows.Forms.Panel panel1;
+        private Guna.UI.WinForms.GunaShadowPanel pnTK;
+        private System.Windows.Forms.Panel pnTKPicture;
         private Guna.UI.WinForms.GunaCircleButton btnClose;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbTK;
         private System.Windows.Forms.FlowLayoutPanel flplistNL;
         private Guna.UI.WinForms.GunaAdvenceButton btnOK;
     }

@@ -12,19 +12,19 @@ namespace RestaurantManagerment
 {
     public partial class Tab2 : UserControl
     {
-        internal string ID;
+        internal string TKDN;
         public Tab2()
         {
             InitializeComponent();
         }
 
-        private void gunaAdvenceButton5_Click(object sender, EventArgs e)
+        private void btnThongTinMonAn_Click(object sender, EventArgs e)
         {
             tab2_1ThongTinMonAn1.BringToFront();
             
         }
 
-        private void gunaAdvenceButton3_Click(object sender, EventArgs e)
+        private void btnNhomMonAn_Click(object sender, EventArgs e)
         {
             tab2_2NhomMonAn1.BringToFront();
 
@@ -32,14 +32,16 @@ namespace RestaurantManagerment
 
         private void Tab2QLThucDon_Load(object sender, EventArgs e)
         {
-            Tab2_3ThongTinNguyenLieu1.Ma = ID;
+            tab2_1ThongTinMonAn1.TKDN = TKDN;
+            tab2_2NhomMonAn1.TKDN = TKDN;
+            Tab2_3ThongTinNguyenLieu1.TKDN = TKDN;
             this.Controls.Add(tab2_2NhomMonAn1);
             this.Controls.Add(tab2_1ThongTinMonAn1);
             this.Controls.Add(Tab2_3ThongTinNguyenLieu1);
             tab2_1ThongTinMonAn1.BringToFront();
         }
 
-        private void gunaAdvenceButton6_Click(object sender, EventArgs e)
+        private void btnThongTinNguyenLieu_Click(object sender, EventArgs e)
         {
             Tab2_3ThongTinNguyenLieu1.BringToFront();
             Tab2_3ThongTinNguyenLieu1.Select();

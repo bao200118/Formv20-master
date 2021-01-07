@@ -39,19 +39,19 @@
             this.pictureBoxUserSmall = new System.Windows.Forms.PictureBox();
             this.pictureBoxUserB = new System.Windows.Forms.PictureBox();
             this.pictureBoxViewRestaurant = new System.Windows.Forms.PictureBox();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassSmall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserSmall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxViewRestaurant)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxTemp
             // 
             this.textBoxTemp.Location = new System.Drawing.Point(467, 151);
             this.textBoxTemp.Name = "textBoxTemp";
-            this.textBoxTemp.Size = new System.Drawing.Size(0, 20);
+            this.textBoxTemp.Size = new System.Drawing.Size(0, 23);
             this.textBoxTemp.TabIndex = 5;
             this.textBoxTemp.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -61,7 +61,7 @@
             this.textBoxUser.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUser.Location = new System.Drawing.Point(472, 154);
             this.textBoxUser.Name = "textBoxUser";
-            this.textBoxUser.Size = new System.Drawing.Size(246, 19);
+            this.textBoxUser.Size = new System.Drawing.Size(246, 23);
             this.textBoxUser.TabIndex = 6;
             this.textBoxUser.Text = "Tên đăng nhập";
             this.textBoxUser.Enter += new System.EventHandler(this.textBoxUser_Enter);
@@ -73,7 +73,7 @@
             this.textBoxPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPassword.Location = new System.Drawing.Point(472, 210);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(246, 19);
+            this.textBoxPassword.Size = new System.Drawing.Size(246, 23);
             this.textBoxPassword.TabIndex = 7;
             this.textBoxPassword.Text = "Mật khẩu";
             this.textBoxPassword.UseSystemPasswordChar = true;
@@ -156,30 +156,30 @@
             this.pictureBoxViewRestaurant.TabIndex = 1;
             this.pictureBoxViewRestaurant.TabStop = false;
             // 
-            // bunifuImageButton1
+            // btnClose
             // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(709, 6);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(15, 15);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 13;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageActive = null;
+            this.btnClose.Location = new System.Drawing.Point(709, 6);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(15, 15);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnClose.TabIndex = 13;
+            this.btnClose.TabStop = false;
+            this.btnClose.Zoom = 10;
+            this.btnClose.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // LoginForm
             // 
             this.AcceptButton = this.buttonLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(737, 393);
             this.ControlBox = false;
-            this.Controls.Add(this.bunifuImageButton1);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.panelPass);
             this.Controls.Add(this.panelUser);
@@ -192,11 +192,11 @@
             this.Controls.Add(this.pictureBoxViewRestaurant);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginForm";
             this.Padding = new System.Windows.Forms.Padding(3);
-            this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ĐĂNG NHẬP";
@@ -205,7 +205,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserSmall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxViewRestaurant)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,7 +222,7 @@
         private System.Windows.Forms.Panel panelUser;
         private System.Windows.Forms.Panel panelPass;
         private System.Windows.Forms.Button buttonLogin;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuImageButton btnClose;
     }
 }
 

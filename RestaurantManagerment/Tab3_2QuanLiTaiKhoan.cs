@@ -16,16 +16,12 @@ namespace RestaurantManagerment
 {
     public partial class Tab3_2QuanLiTaiKhoan : UserControl
     {
-        internal string TKDN="QL002";
+        internal string TKDN;
         public Tab3_2QuanLiTaiKhoan()
         {
             InitializeComponent();
         }
         DataGridViewRow drvTK;
-        private void cbLoaiTaiKhoan_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
         List<TaiKhoan_DTO> dstaikhoan;
 
         private void LoadTaiKhoan()

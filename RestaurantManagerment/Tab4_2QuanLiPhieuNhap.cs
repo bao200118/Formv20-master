@@ -17,6 +17,7 @@ namespace RestaurantManagerment
 {
     public partial class Tab4_2QuanLiPhieuNhap : UserControl
     {
+        internal string TKDN;
         public Tab4_2QuanLiPhieuNhap()
         {
             InitializeComponent();
@@ -58,7 +59,7 @@ namespace RestaurantManagerment
             gDGVPhieuNhap.Columns["Thukho"].HeaderText = "Thủ kho";
 
             gDGVPhieuNhap.Columns["MaNL"].Visible = false;
-            
+
             for (int i = 0; i < 8; i++) gDGVPhieuNhap.AutoResizeColumn(i);
 
         }
@@ -74,7 +75,7 @@ namespace RestaurantManagerment
                 {
                     cBMaNL.Items.Add(s);
                 }
-                    
+
             }
             catch (Exception ex)
             {
@@ -85,8 +86,8 @@ namespace RestaurantManagerment
         public void LayTTnguyenLieu(int a)
         {
             NguyenLieu_DTO nl = NguyenLieu_BUS.LayTTNguyenLieu(a);
-                txtTenNL.Text = nl.TenNL;
-                txtDonVi.Text = nl.Donvi;
+            txtTenNL.Text = nl.TenNL;
+            txtDonVi.Text = nl.Donvi;
         }
         private void LocPhieuNhap(DateTime checkin, DateTime checkout)
         {
@@ -124,7 +125,7 @@ namespace RestaurantManagerment
             gDGVPhieuNhap.Columns["Thukho"].HeaderText = "Thủ kho";
 
             gDGVPhieuNhap.Columns["MaNL"].Visible = false;
-            
+
             for (int i = 0; i < 8; i++) gDGVPhieuNhap.AutoResizeColumn(i);
 
         }
@@ -137,107 +138,130 @@ namespace RestaurantManagerment
         // Button thêm phiếu nhập
         private void gunaAdvenceButton4_Click(object sender, EventArgs e)
         {
-            if (cBMaNL.Text == "")
+            if (TKDN.Substring(0, 2) == "NV")
             {
-                MessageBox.Show("Vui lòng chọn mã nguyên liệu !");
-                return;
+                MessageBox.Show("Chỉ có chức vụ quản lý mới được sử dụng chức năng này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            if (txtSoLuong.Text == "")
+            else
             {
-                MessageBox.Show("Vui lòng nhập Số lượng !");
-                return;
-            }
-            if (txtDonGia.Text == "")
-            {
-                MessageBox.Show("Vui Lòng nhập đơn giá !");
-                return;
-            }
-            if (txtCungCap.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập Đơn vị cung cấp !");
-                return;
-            }
-            if (txtThuKho.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập Thủ kho !");
-                return;
-            }
-
-
-            PhieuNhap_DTO phieunhap = new PhieuNhap_DTO();
-            phieunhap.MaNL = int.Parse(cBMaNL.Text.ToString());
-            phieunhap.TenNL = txtTenNL.Text.ToString();
-            phieunhap.DonVi = txtDonVi.Text.ToString();
-            try
-            {
-                phieunhap.Soluong = int.Parse(txtSoLuong.Text.ToString());
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Dữ liệu nhập có lỗi. Xin kiểm tra lại", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            
-            phieunhap.Dongia = int.Parse(txtDonGia.Text.ToString());
-            phieunhap.Ngaynhap = dtpNgayNhap.Text.ToString();
-            phieunhap.Donvicungcap = txtCungCap.Text.ToString();
-            phieunhap.Thukho = txtThuKho.Text.ToString();
-            if (PhieuNhap_BUS.ThemPhieuNhap(phieunhap))
-            {
-                LoadPhieuNhap();
-                MessageBox.Show("Đã Thêm");
-                return;
-            }
-            MessageBox.Show("Thêm thất bại !");
-        }
-        //Button Xóa phiếu nhập
-        private void gunaAdvenceButton2_Click(object sender, EventArgs e)
-        {
-            if (dgvPhieuNhap == null)
-            {
-                MessageBox.Show("Chọn món ăn muốn xóa");
-                return;
-            }
-
-            PhieuNhap_DTO phieunhap = new PhieuNhap_DTO();
-            phieunhap.MaPN = int.Parse(txtMaPN.Text);
-            phieunhap.MaNL = int.Parse(cBMaNL.Text);
-            phieunhap.TenNL = txtTenNL.Text;
-            phieunhap.DonVi = txtDonVi.Text;
-            phieunhap.Soluong = int.Parse(txtSoLuong.Text);
-            phieunhap.Dongia = int.Parse(txtDonGia.Text);
-            phieunhap.Ngaynhap = dtpNgayNhap.Text;
-            phieunhap.Donvicungcap = txtCungCap.Text;
-            phieunhap.Thukho = txtThuKho.Text;
-
-
-            if (MessageBox.Show("Bạn có chắc chắn muốn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                if (dsphieunhap == null)
-                    gDGVPhieuNhap.DataSource = null;
-                if (PhieuNhap_BUS.XoaPhieuNhap(phieunhap))
+                if (cBMaNL.Text == "")
                 {
-                    dgvPhieuNhap = null;
+                    MessageBox.Show("Vui lòng chọn mã nguyên liệu !");
+                    return;
+                }
+                if (txtSoLuong.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập Số lượng !");
+                    return;
+                }
+                if (txtDonGia.Text == "")
+                {
+                    MessageBox.Show("Vui Lòng nhập đơn giá !");
+                    return;
+                }
+                if (txtCungCap.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập Đơn vị cung cấp !");
+                    return;
+                }
+                if (txtThuKho.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập Thủ kho !");
+                    return;
+                }
+
+
+                PhieuNhap_DTO phieunhap = new PhieuNhap_DTO();
+                phieunhap.MaNL = int.Parse(cBMaNL.Text.ToString());
+                phieunhap.TenNL = txtTenNL.Text.ToString();
+                phieunhap.DonVi = txtDonVi.Text.ToString();
+                try
+                {
+                    phieunhap.Soluong = int.Parse(txtSoLuong.Text.ToString());
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Dữ liệu nhập có lỗi. Xin kiểm tra lại", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                phieunhap.Dongia = int.Parse(txtDonGia.Text.ToString());
+                phieunhap.Ngaynhap = dtpNgayNhap.Text.ToString();
+                phieunhap.Donvicungcap = txtCungCap.Text.ToString();
+                phieunhap.Thukho = txtThuKho.Text.ToString();
+                if (PhieuNhap_BUS.ThemPhieuNhap(phieunhap))
+                {
                     txtMaPN.Text = "";
                     cBMaNL.Text = "";
                     txtTenNL.Text = "";
                     txtDonVi.Text = "";
                     txtSoLuong.Text = "";
                     txtDonGia.Text = "";
-                    
+
                     txtCungCap.Text = "";
                     txtThuKho.Text = "";
                     LoadPhieuNhap();
-                    MessageBox.Show("Xóa thành công");
+                    MessageBox.Show("Đã Thêm");
                     return;
                 }
-                MessageBox.Show("Xóa thất bại");
+                MessageBox.Show("Thêm thất bại !");
+            }
+        }
+        //Button Xóa phiếu nhập
+        private void gunaAdvenceButton2_Click(object sender, EventArgs e)
+        {
+            if (TKDN.Substring(0, 2) == "NV")
+            {
+                MessageBox.Show("Chỉ có chức vụ quản lý mới được sử dụng chức năng này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (dgvPhieuNhap == null)
+                {
+                    MessageBox.Show("Chọn món ăn muốn xóa");
+                    return;
+                }
+
+                PhieuNhap_DTO phieunhap = new PhieuNhap_DTO();
+                phieunhap.MaPN = int.Parse(txtMaPN.Text);
+                phieunhap.MaNL = int.Parse(cBMaNL.Text);
+                phieunhap.TenNL = txtTenNL.Text;
+                phieunhap.DonVi = txtDonVi.Text;
+                phieunhap.Soluong = int.Parse(txtSoLuong.Text);
+                phieunhap.Dongia = int.Parse(txtDonGia.Text);
+                phieunhap.Ngaynhap = dtpNgayNhap.Text;
+                phieunhap.Donvicungcap = txtCungCap.Text;
+                phieunhap.Thukho = txtThuKho.Text;
+
+
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    if (dsphieunhap == null)
+                        gDGVPhieuNhap.DataSource = null;
+                    if (PhieuNhap_BUS.XoaPhieuNhap(phieunhap))
+                    {
+                        dgvPhieuNhap = null;
+                        txtMaPN.Text = "";
+                        cBMaNL.Text = "";
+                        txtTenNL.Text = "";
+                        txtDonVi.Text = "";
+                        txtSoLuong.Text = "";
+                        txtDonGia.Text = "";
+
+                        txtCungCap.Text = "";
+                        txtThuKho.Text = "";
+                        LoadPhieuNhap();
+                        MessageBox.Show("Xóa thành công");
+                        return;
+                    }
+                    MessageBox.Show("Xóa thất bại");
+                }
             }
         }
 
-        private void gunaAdvenceButton1_Click(object sender, EventArgs e)
+        private void btnLoc_Click(object sender, EventArgs e)
         {
-            LocPhieuNhap(dtpTuNgay.Value,dtpDenNgay.Value);
+            LocPhieuNhap(dtpTuNgay.Value, dtpDenNgay.Value);
         }
 
         private void btnHienThi_Click(object sender, EventArgs e)

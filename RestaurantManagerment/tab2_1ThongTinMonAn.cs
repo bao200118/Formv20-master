@@ -18,6 +18,7 @@ namespace RestaurantManagerment
 {
     public partial class tab2_1ThongTinMonAn : UserControl
     {
+        internal string TKDN;
         public tab2_1ThongTinMonAn()
         {
             InitializeComponent();
@@ -42,11 +43,14 @@ namespace RestaurantManagerment
             cbFillNhomMon.Items.Clear();
             cbNhomMon.Items.Clear();
             listNhomMonAn = NhomMonAn_DAO.LayNhomMonAn();
-            for (int i = 0; i < listNhomMonAn.Count; i++)
+            if (listNhomMonAn != null)
             {
-                string str = listNhomMonAn[i].TenNhomMonAn;
-                cbNhomMon.Items.Add(str);
-                cbFillNhomMon.Items.Add(str);
+                for (int i = 0; i < listNhomMonAn.Count; i++)
+                {
+                    string str = listNhomMonAn[i].TenNhomMonAn;
+                    cbNhomMon.Items.Add(str);
+                    cbFillNhomMon.Items.Add(str);
+                }
             }
         }
 
@@ -87,7 +91,7 @@ namespace RestaurantManagerment
         {
             if (cbNhomMon.Text == "")
             {
-                MessageBox.Show("Chon nhom mon an");
+                MessageBox.Show("Chọn nhóm món ăn");
                 return;
             }
             if (txtTenMonAn.Text == "")
@@ -135,6 +139,7 @@ namespace RestaurantManagerment
             {
                 LoadMonAn();
                 MessageBox.Show("Đã Thêm");
+                LamMoiTextBox();
                 return;
             }
             MessageBox.Show("Thêm thất bại !");
@@ -163,57 +168,30 @@ namespace RestaurantManagerment
         //--------------------------Sửa Món Ăn---------------------------------
         private void btnSuaMonAn_Click(object sender, EventArgs e)
         {
-            if (drMonAn == null)
+            if (TKDN.Substring(0, 2) == "NV")
             {
-                MessageBox.Show("Chọn Món Ăn Muốn Sửa");
-                return;
+                MessageBox.Show("Chỉ có chức vụ quản lý mới được sử dụng chức năng này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-            MonAn_DTO monAn = new MonAn_DTO();
-
-            monAn.ID = int.Parse(drMonAn.Cells["ID"].Value.ToString());
-            monAn.TenNhomMon = cbNhomMon.Text;
-            monAn.TenMonAn = txtTenMonAn.Text;
-            monAn.DonViTinh = txtDonViTinh.Text;
-            monAn.Gia = int.Parse(txtDonGia.Text);
-            monAn.IMAGE = pictureBox1.Image;
-
-            if (MonAn_BUS.SuaMonAn(monAn))
+            else
             {
-
-                drMonAn = null;
-                cbNhomMon.Text = "";
-                txtTenMonAn.Text = "";
-                txtDonViTinh.Text = "";
-                txtDonGia.Text = "";
-                pictureBox1.Image = null;
-                LoadMonAn();
-                MessageBox.Show("Sửa thành công");
-                return;
-            }
-            MessageBox.Show("Sửa thất bại");
-        }
-
-        private void btnXoaMonAn_Click(object sender, EventArgs e)
-        {
-            if (drMonAn == null)
-            {
-                MessageBox.Show("Chọn món ăn muốn xóa");
-                return;
-            }
-
-            MonAn_DTO monAn = new MonAn_DTO();
-            monAn.TenNhomMon = cbNhomMon.Text;
-            monAn.TenMonAn = txtTenMonAn.Text;
-            monAn.DonViTinh = txtDonViTinh.Text;
-            monAn.Gia = int.Parse(txtDonGia.Text);
-
-            if (MessageBox.Show("Bạn có chắc chắn muốn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                if (lstMonAn == null)
-                    dtgrvDanhSachMonAn.DataSource = null;
-                if (MonAn_BUS.XoaMonAn(monAn))
+                if (drMonAn == null)
                 {
+                    MessageBox.Show("Chọn Món Ăn Muốn Sửa");
+                    return;
+                }
+
+                MonAn_DTO monAn = new MonAn_DTO();
+
+                monAn.ID = int.Parse(drMonAn.Cells["ID"].Value.ToString());
+                monAn.TenNhomMon = cbNhomMon.Text;
+                monAn.TenMonAn = txtTenMonAn.Text;
+                monAn.DonViTinh = txtDonViTinh.Text;
+                monAn.Gia = int.Parse(txtDonGia.Text);
+                monAn.IMAGE = pictureBox1.Image;
+
+                if (MonAn_BUS.SuaMonAn(monAn))
+                {
+
                     drMonAn = null;
                     cbNhomMon.Text = "";
                     txtTenMonAn.Text = "";
@@ -221,10 +199,51 @@ namespace RestaurantManagerment
                     txtDonGia.Text = "";
                     pictureBox1.Image = null;
                     LoadMonAn();
-                    MessageBox.Show("Xóa thành công");
+                    MessageBox.Show("Sửa thành công");
                     return;
                 }
-                MessageBox.Show("Xóa thất bại");
+                MessageBox.Show("Sửa thất bại");
+            }
+        }
+
+        private void btnXoaMonAn_Click(object sender, EventArgs e)
+        {
+            if (TKDN.Substring(0, 2) == "NV")
+            {
+                MessageBox.Show("Chỉ có chức vụ quản lý mới được sử dụng chức năng này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (drMonAn == null)
+                {
+                    MessageBox.Show("Chọn món ăn muốn xóa");
+                    return;
+                }
+
+                MonAn_DTO monAn = new MonAn_DTO();
+                monAn.TenNhomMon = cbNhomMon.Text;
+                monAn.TenMonAn = txtTenMonAn.Text;
+                monAn.DonViTinh = txtDonViTinh.Text;
+                monAn.Gia = int.Parse(txtDonGia.Text);
+
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    if (lstMonAn == null)
+                        dtgrvDanhSachMonAn.DataSource = null;
+                    if (MonAn_BUS.XoaMonAn(monAn))
+                    {
+                        drMonAn = null;
+                        cbNhomMon.Text = "";
+                        txtTenMonAn.Text = "";
+                        txtDonViTinh.Text = "";
+                        txtDonGia.Text = "";
+                        pictureBox1.Image = null;
+                        LoadMonAn();
+                        MessageBox.Show("Xóa thành công");
+                        return;
+                    }
+                    MessageBox.Show("Xóa thất bại");
+                }
             }
         }
 
@@ -263,11 +282,20 @@ namespace RestaurantManagerment
             cbFillNhomMon.Text = "- Tất Cả -";
             cbFillNhomMon.ForeColor = Color.Gray;
         }
-
+        private void LamMoiTextBox()
+        {
+            txtTenMonAn.Text = "";
+            txtDonViTinh.Text = "";
+            cbFillNhomMon.Text = "";
+            txtDonGia.Text = "";
+            txtTimKiem.Text = "";
+            cbNhomMon.Text = "";
+            pictureBox1.Image = null;
+        }
         private void tab2_1ThongTinMonAn_Enter(object sender, EventArgs e)
         {
 
-            LoadNhomMonAn(); 
+            LoadNhomMonAn();
         }
     }
 }

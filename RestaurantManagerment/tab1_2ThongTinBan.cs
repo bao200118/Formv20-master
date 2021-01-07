@@ -15,6 +15,7 @@ namespace RestaurantManagerment
 {
     public partial class tab1_2ThongTinBan : UserControl
     {
+        internal string TKDN;
         public tab1_2ThongTinBan()
         {
                 InitializeComponent();
@@ -86,6 +87,7 @@ namespace RestaurantManagerment
                     lbSoBanHienCo.Text = (lstBanAn.Count).ToString();
                 else
                     lbSoBanHienCo.Text = "0";
+                txtTenBan.Text = "";
                 return;
             }
             MessageBox.Show("Thêm thất bại");
@@ -120,72 +122,86 @@ namespace RestaurantManagerment
         //Sửa Bàn Ăn
         private void btnSuaBanAn_Click_1(object sender, EventArgs e)
         {
-            if (drBan == null)
+            if (TKDN.Substring(0, 2) == "NV")
             {
-                MessageBox.Show("Chọn bàn muốn sửa");
-                return;
+                MessageBox.Show("Chỉ có chức vụ quản lý mới được sử dụng chức năng này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            BanAn_DTO banAnSua = new BanAn_DTO();
-            banAnSua.ID = int.Parse(drBan.Cells["ID"].Value.ToString());
-            banAnSua.TenBan = txtTenBan.Text.ToString();
+            else
+            {
+                if (drBan == null)
+                {
+                    MessageBox.Show("Chọn bàn muốn sửa");
+                    return;
+                }
+                BanAn_DTO banAnSua = new BanAn_DTO();
+                banAnSua.ID = int.Parse(drBan.Cells["ID"].Value.ToString());
+                banAnSua.TenBan = txtTenBan.Text.ToString();
 
-            if (BanAn_BUS.SuaBanAn(banAnSua))
-            {
-                drBan = null;
-                txtTenBan.Text = "";
-                lbTrangThai.Text = "";
-                MessageBox.Show("Sửa thành công");
-                LoadBanAn();
-                return;
+                if (BanAn_BUS.SuaBanAn(banAnSua))
+                {
+                    drBan = null;
+                    txtTenBan.Text = "";
+                    lbTrangThai.Text = "";
+                    MessageBox.Show("Sửa thành công");
+                    LoadBanAn();
+                    return;
+                }
+                MessageBox.Show("Sửa thất bại");
             }
-            MessageBox.Show("Sửa thất bại");
         }
 
         // Xóa bàn ăn  
         private void btnXoaBanAn_Click_1(object sender, EventArgs e)
         {
-            if (drBan == null)
+            if (TKDN.Substring(0, 2) == "NV")
             {
-                MessageBox.Show("Chọn bàn muốn xóa");
-                return;
+                MessageBox.Show("Chỉ có chức vụ quản lý mới được sử dụng chức năng này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            BanAn_DTO banAnXoa = new BanAn_DTO();
-            banAnXoa.ID = int.Parse(drBan.Cells["ID"].Value.ToString());
-            if (drBan.Cells["TrangThai"].Value.ToString() == "Có Người")
+            else
             {
-                MessageBox.Show("Không thể xóa bàn đang có người");
-                return;
-            }
-
-            /*if (MessageBox.Show("Xóa bàn sẽ xóa toàn bộ hóa đơn của bàn đó", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
-            {
-                try
+                if (drBan == null)
                 {
-                    HoaDon_BUS.XoaHoaDonCoIDBan(banAnXoa.ID); // xóa các hóa đơn có liên quan đến bàn đó
-                }
-                catch (Exception)
-                {
+                    MessageBox.Show("Chọn bàn muốn xóa");
                     return;
                 }
-            */
-            if (BanAn_BUS.XoaBanAn(banAnXoa))
-            {
-                drBan = null;
-                txtTenBan.Text = "";
-                lbTrangThai.Text = "";
-                MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadBanAn();
+                BanAn_DTO banAnXoa = new BanAn_DTO();
+                banAnXoa.ID = int.Parse(drBan.Cells["ID"].Value.ToString());
+                if (drBan.Cells["TrangThai"].Value.ToString() == "Có Người")
+                {
+                    MessageBox.Show("Không thể xóa bàn đang có người");
+                    return;
+                }
 
-                if (lstBanAn != null)
-                    lbTrangThai.Text = (lstBanAn.Count).ToString();
+                /*if (MessageBox.Show("Xóa bàn sẽ xóa toàn bộ hóa đơn của bàn đó", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    try
+                    {
+                        HoaDon_BUS.XoaHoaDonCoIDBan(banAnXoa.ID); // xóa các hóa đơn có liên quan đến bàn đó
+                    }
+                    catch (Exception)
+                    {
+                        return;
+                    }
+                */
+                if (BanAn_BUS.XoaBanAn(banAnXoa))
+                {
+                    drBan = null;
+                    txtTenBan.Text = "";
+                    lbTrangThai.Text = "";
+                    MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadBanAn();
+
+                    if (lstBanAn != null)
+                        lbTrangThai.Text = (lstBanAn.Count).ToString();
+                    else
+                        lbTrangThai.Text = "0";
+
+                    return;
+                }
+
                 else
-                    lbTrangThai.Text = "0";
-
-                return;
+                    MessageBox.Show("Xóa thất bại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            else
-                MessageBox.Show("Xóa thất bại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         // ------------- tìm kiếm bàn ăn ----------------------------

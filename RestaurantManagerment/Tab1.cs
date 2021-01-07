@@ -12,7 +12,7 @@ namespace RestaurantManagerment
 {
     public partial class Tab1 : UserControl
     {
-        internal string Quyen;
+        internal string TKDN;
         public Tab1()
         {
             InitializeComponent();
@@ -32,9 +32,10 @@ namespace RestaurantManagerment
 
         private void Tab1_1_Load(object sender, EventArgs e)
         {
-            tab1_1_1BanAn1.Quyen = Quyen;
-            panel2.Controls.Add(tab1_1_1BanAn1);
-            panel2.Controls.Add(tab1_1_2ThongTinBan1);
+            tab1_1_2ThongTinBan1.TKDN = TKDN;
+            tab1_1_1BanAn1.TKDN = TKDN;
+            pnTabCon.Controls.Add(tab1_1_1BanAn1);
+            pnTabCon.Controls.Add(tab1_1_2ThongTinBan1);
         }
 
         private void Tab1_Enter(object sender, EventArgs e)

@@ -33,13 +33,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgrvDanhTaiKhoan = new Guna.UI.WinForms.GunaDataGridView();
             this.btnSuaTK = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grboxThongTinTK = new System.Windows.Forms.GroupBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbMK = new System.Windows.Forms.Label();
+            this.lbTenTK = new System.Windows.Forms.Label();
             this.txtTenTaiKhoan = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvDanhTaiKhoan)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.grboxThongTinTK.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgrvDanhTaiKhoan
@@ -119,23 +119,23 @@
             this.btnSuaTK.UseVisualStyleBackColor = false;
             this.btnSuaTK.Click += new System.EventHandler(this.btnSuaTK_Click);
             // 
-            // groupBox1
+            // grboxThongTinTK
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(255)))));
-            this.groupBox1.Controls.Add(this.txtMatKhau);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtTenTaiKhoan);
-            this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.DarkViolet;
-            this.groupBox1.Location = new System.Drawing.Point(68, 22);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(625, 182);
-            this.groupBox1.TabIndex = 57;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông Tin Tài Khoản";
+            this.grboxThongTinTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(255)))));
+            this.grboxThongTinTK.Controls.Add(this.txtMatKhau);
+            this.grboxThongTinTK.Controls.Add(this.lbMK);
+            this.grboxThongTinTK.Controls.Add(this.lbTenTK);
+            this.grboxThongTinTK.Controls.Add(this.txtTenTaiKhoan);
+            this.grboxThongTinTK.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grboxThongTinTK.ForeColor = System.Drawing.Color.DarkViolet;
+            this.grboxThongTinTK.Location = new System.Drawing.Point(68, 22);
+            this.grboxThongTinTK.Margin = new System.Windows.Forms.Padding(4);
+            this.grboxThongTinTK.Name = "grboxThongTinTK";
+            this.grboxThongTinTK.Padding = new System.Windows.Forms.Padding(4);
+            this.grboxThongTinTK.Size = new System.Drawing.Size(625, 182);
+            this.grboxThongTinTK.TabIndex = 57;
+            this.grboxThongTinTK.TabStop = false;
+            this.grboxThongTinTK.Text = "Thông Tin Tài Khoản";
             // 
             // txtMatKhau
             // 
@@ -147,29 +147,29 @@
             this.txtMatKhau.Size = new System.Drawing.Size(295, 35);
             this.txtMatKhau.TabIndex = 9;
             // 
-            // label2
+            // lbMK
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(75, 122);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 27);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Mật Khẩu";
+            this.lbMK.AutoSize = true;
+            this.lbMK.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMK.ForeColor = System.Drawing.Color.Black;
+            this.lbMK.Location = new System.Drawing.Point(75, 122);
+            this.lbMK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbMK.Name = "lbMK";
+            this.lbMK.Size = new System.Drawing.Size(109, 27);
+            this.lbMK.TabIndex = 5;
+            this.lbMK.Text = "Mật Khẩu";
             // 
-            // label1
+            // lbTenTK
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(72, 62);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 27);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Tên Tài Khoản";
+            this.lbTenTK.AutoSize = true;
+            this.lbTenTK.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenTK.ForeColor = System.Drawing.Color.Black;
+            this.lbTenTK.Location = new System.Drawing.Point(72, 62);
+            this.lbTenTK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTenTK.Name = "lbTenTK";
+            this.lbTenTK.Size = new System.Drawing.Size(156, 27);
+            this.lbTenTK.TabIndex = 4;
+            this.lbTenTK.Text = "Tên Tài Khoản";
             // 
             // txtTenTaiKhoan
             // 
@@ -189,15 +189,15 @@
             this.BackColor = System.Drawing.Color.Linen;
             this.Controls.Add(this.dtgrvDanhTaiKhoan);
             this.Controls.Add(this.btnSuaTK);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grboxThongTinTK);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Tab3_2QuanLiTaiKhoan";
             this.Size = new System.Drawing.Size(1091, 804);
             this.Load += new System.EventHandler(this.Tab3_2QuanLiTaiKhoan_Load);
             this.Enter += new System.EventHandler(this.Tab3_2QuanLiTaiKhoan_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvDanhTaiKhoan)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grboxThongTinTK.ResumeLayout(false);
+            this.grboxThongTinTK.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -206,9 +206,9 @@
 
         private Guna.UI.WinForms.GunaDataGridView dtgrvDanhTaiKhoan;
         private System.Windows.Forms.Button btnSuaTK;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox grboxThongTinTK;
+        private System.Windows.Forms.Label lbMK;
+        private System.Windows.Forms.Label lbTenTK;
         private System.Windows.Forms.TextBox txtTenTaiKhoan;
         private System.Windows.Forms.TextBox txtMatKhau;
     }

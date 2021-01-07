@@ -35,17 +35,17 @@
             this.QLNV = new Bunifu.Framework.UI.BunifuFlatButton();
             this.QLTD = new Bunifu.Framework.UI.BunifuFlatButton();
             this.QLBAn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.gunaGradient2Panel2 = new Guna.UI.WinForms.GunaGradient2Panel();
+            this.picRestaurant = new System.Windows.Forms.PictureBox();
+            this.pnControl = new Guna.UI.WinForms.GunaShadowPanel();
+            this.pnCoordinates = new System.Windows.Forms.Panel();
+            this.pnHeaderWhite = new Guna.UI.WinForms.GunaGradient2Panel();
             this.tab1 = new RestaurantManagerment.Tab1();
             this.tab2 = new RestaurantManagerment.Tab2();
             this.tab3 = new RestaurantManagerment.Tab3();
             this.tab4 = new RestaurantManagerment.Tab4();
             this.tab5 = new RestaurantManagerment.Tab5();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.gunaShadowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picRestaurant)).BeginInit();
+            this.pnControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // Exit
@@ -242,7 +242,7 @@
             // 
             this.QLBAn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(59)))), ((int)(((byte)(176)))));
             this.QLBAn.AutoSize = true;
-            this.QLBAn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(59)))), ((int)(((byte)(176)))));
+            this.QLBAn.BackColor = System.Drawing.Color.White;
             this.QLBAn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.QLBAn.BorderRadius = 0;
             this.QLBAn.ButtonText = "Quản Lí Bàn Ăn";
@@ -276,59 +276,59 @@
             this.QLBAn.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QLBAn.Click += new System.EventHandler(this.QLBAn_Click);
             // 
-            // pictureBox2
+            // picRestaurant
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(8, 38);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(316, 212);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.picRestaurant.BackColor = System.Drawing.Color.Transparent;
+            this.picRestaurant.Image = ((System.Drawing.Image)(resources.GetObject("picRestaurant.Image")));
+            this.picRestaurant.Location = new System.Drawing.Point(8, 38);
+            this.picRestaurant.Margin = new System.Windows.Forms.Padding(4);
+            this.picRestaurant.Name = "picRestaurant";
+            this.picRestaurant.Size = new System.Drawing.Size(316, 212);
+            this.picRestaurant.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picRestaurant.TabIndex = 1;
+            this.picRestaurant.TabStop = false;
             // 
-            // gunaShadowPanel1
+            // pnControl
             // 
-            this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaShadowPanel1.BaseColor = System.Drawing.Color.Linen;
-            this.gunaShadowPanel1.Controls.Add(this.pictureBox2);
-            this.gunaShadowPanel1.Controls.Add(this.Exit);
-            this.gunaShadowPanel1.Controls.Add(this.QLHD);
-            this.gunaShadowPanel1.Controls.Add(this.QLBAn);
-            this.gunaShadowPanel1.Controls.Add(this.QLNV);
-            this.gunaShadowPanel1.Controls.Add(this.QLTD);
-            this.gunaShadowPanel1.Controls.Add(this.TK);
-            this.gunaShadowPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gunaShadowPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gunaShadowPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.gunaShadowPanel1.Name = "gunaShadowPanel1";
-            this.gunaShadowPanel1.Radius = 6;
-            this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.gunaShadowPanel1.Size = new System.Drawing.Size(336, 788);
-            this.gunaShadowPanel1.TabIndex = 37;
+            this.pnControl.BackColor = System.Drawing.Color.Transparent;
+            this.pnControl.BaseColor = System.Drawing.Color.Linen;
+            this.pnControl.Controls.Add(this.picRestaurant);
+            this.pnControl.Controls.Add(this.Exit);
+            this.pnControl.Controls.Add(this.QLHD);
+            this.pnControl.Controls.Add(this.QLBAn);
+            this.pnControl.Controls.Add(this.QLNV);
+            this.pnControl.Controls.Add(this.QLTD);
+            this.pnControl.Controls.Add(this.TK);
+            this.pnControl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnControl.Location = new System.Drawing.Point(0, 0);
+            this.pnControl.Margin = new System.Windows.Forms.Padding(4);
+            this.pnControl.Name = "pnControl";
+            this.pnControl.Radius = 6;
+            this.pnControl.ShadowColor = System.Drawing.Color.Black;
+            this.pnControl.Size = new System.Drawing.Size(336, 788);
+            this.pnControl.TabIndex = 37;
             // 
-            // panel1
+            // pnCoordinates
             // 
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
-            this.panel1.TabIndex = 46;
+            this.pnCoordinates.Location = new System.Drawing.Point(0, 0);
+            this.pnCoordinates.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnCoordinates.Name = "pnCoordinates";
+            this.pnCoordinates.Size = new System.Drawing.Size(200, 100);
+            this.pnCoordinates.TabIndex = 46;
             // 
-            // gunaGradient2Panel2
+            // pnHeaderWhite
             // 
-            this.gunaGradient2Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradient2Panel2.GradientColor1 = System.Drawing.Color.White;
-            this.gunaGradient2Panel2.GradientColor2 = System.Drawing.Color.White;
-            this.gunaGradient2Panel2.Location = new System.Drawing.Point(337, 0);
-            this.gunaGradient2Panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.gunaGradient2Panel2.Name = "gunaGradient2Panel2";
-            this.gunaGradient2Panel2.Size = new System.Drawing.Size(1060, 30);
-            this.gunaGradient2Panel2.TabIndex = 14;
-            this.gunaGradient2Panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gunaGradient2Panel2_MouseDown);
-            this.gunaGradient2Panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.gunaGradient2Panel2_MouseMove);
-            this.gunaGradient2Panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.gunaGradient2Panel2_MouseUp);
+            this.pnHeaderWhite.BackColor = System.Drawing.Color.Transparent;
+            this.pnHeaderWhite.GradientColor1 = System.Drawing.Color.White;
+            this.pnHeaderWhite.GradientColor2 = System.Drawing.Color.White;
+            this.pnHeaderWhite.Location = new System.Drawing.Point(337, 0);
+            this.pnHeaderWhite.Margin = new System.Windows.Forms.Padding(4);
+            this.pnHeaderWhite.Name = "pnHeaderWhite";
+            this.pnHeaderWhite.Size = new System.Drawing.Size(1070, 30);
+            this.pnHeaderWhite.TabIndex = 14;
+            this.pnHeaderWhite.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnHeaderWhite_MouseDown);
+            this.pnHeaderWhite.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnHeaderWhite_MouseMove);
+            this.pnHeaderWhite.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnHeaderWhite_MouseUp);
             // 
             // tab1
             // 
@@ -380,9 +380,9 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1387, 788);
             this.ControlBox = false;
-            this.Controls.Add(this.gunaGradient2Panel2);
-            this.Controls.Add(this.gunaShadowPanel1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnHeaderWhite);
+            this.Controls.Add(this.pnControl);
+            this.Controls.Add(this.pnCoordinates);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -393,37 +393,29 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form2_Load);
-            this.ResizeBegin += new System.EventHandler(this.FormMain_ResizeBegin);
-            this.ResizeEnd += new System.EventHandler(this.FormMain_ResizeEnd);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormMain_Paint);
-            this.Layout += new System.Windows.Forms.LayoutEventHandler(this.FormMain_Layout);
-            this.Leave += new System.EventHandler(this.FormMain_Leave);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gunaGradient2Panel2_MouseDown);
-            this.Validating += new System.ComponentModel.CancelEventHandler(this.FormMain_Validating);
-            this.Validated += new System.EventHandler(this.FormMain_Validated);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.gunaShadowPanel1.ResumeLayout(false);
-            this.gunaShadowPanel1.PerformLayout();
+            this.Load += new System.EventHandler(this.FormMain_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picRestaurant)).EndInit();
+            this.pnControl.ResumeLayout(false);
+            this.pnControl.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picRestaurant;
         private Bunifu.Framework.UI.BunifuFlatButton QLBAn;
         private Bunifu.Framework.UI.BunifuFlatButton QLTD;
         private Bunifu.Framework.UI.BunifuFlatButton QLNV;
         private Bunifu.Framework.UI.BunifuFlatButton QLHD;
         private Bunifu.Framework.UI.BunifuFlatButton TK;
         private Bunifu.Framework.UI.BunifuFlatButton Exit;
-        private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel1;
+        private Guna.UI.WinForms.GunaShadowPanel pnControl;
         private Tab1 tab1;
         private Tab3 tab3;
         private Tab2 tab2;
         private Tab4 tab4;
         private Tab5 tab5;
-        private System.Windows.Forms.Panel panel1;
-        private Guna.UI.WinForms.GunaGradient2Panel gunaGradient2Panel2;
+        private System.Windows.Forms.Panel pnCoordinates;
+        private Guna.UI.WinForms.GunaGradient2Panel pnHeaderWhite;
     }
 }

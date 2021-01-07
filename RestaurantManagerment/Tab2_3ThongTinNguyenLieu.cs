@@ -18,7 +18,7 @@ namespace RestaurantManagerment
 {
     public partial class Tab2_3ThongTinNguyenLieu : UserControl
     {
-        internal string Ma;
+        internal string TKDN;
         public Tab2_3ThongTinNguyenLieu()
         {
             InitializeComponent();
@@ -65,7 +65,7 @@ namespace RestaurantManagerment
         {
             if (txtTenNL.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập tên nguyên liệu !");
+                MessageBox.Show("Vui lòng nhập tên nguyên liệu");
                 return;
             }
             if (txtDonVi.Text == "")
@@ -73,9 +73,6 @@ namespace RestaurantManagerment
                 MessageBox.Show("Vui Lòng nhập đơn vị tính !");
                 return;
             }
-
-
-
             NguyenLieu_DTO nguyenlieu = new NguyenLieu_DTO();
             nguyenlieu.TenNL = txtTenNL.Text;
             nguyenlieu.Donvi = txtDonVi.Text.ToString();
@@ -93,12 +90,16 @@ namespace RestaurantManagerment
             }
             if (NguyenLieu_BUS.ThemNguyenLieu(nguyenlieu))
             {
+                txtTenNL.Text = "";
+                txtDonVi.Text = "";
+                txtSoLuong.Text = "";
                 LoadNguyenLieu();
-                MessageBox.Show("Đã Thêm");
+                MessageBox.Show("Đã thêm");
                 return;
             }
             MessageBox.Show("Thêm thất bại !");
         }
+
         // sự kiện click vào 1 dòng
         private void dtgrvDanhSachNL_Click(object sender, EventArgs e)
         {
@@ -122,64 +123,78 @@ namespace RestaurantManagerment
 
         private void gABCapNhat_Click(object sender, EventArgs e)
         {
-            if (drvNL == null)
+            if (TKDN.Substring(0, 2) == "NV")
             {
-                MessageBox.Show("Chọn Món Ăn Muốn Sửa");
-                return;
+                MessageBox.Show("Chỉ có chức vụ quản lý mới được sử dụng chức năng này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-            NguyenLieu_DTO nguyenLieu = new NguyenLieu_DTO();
-
-            nguyenLieu.MaNL = int.Parse(drvNL.Cells["MaNL"].Value.ToString());
-            nguyenLieu.TenNL = txtTenNL.Text;
-            nguyenLieu.Donvi = txtDonVi.Text;
-            nguyenLieu.Soluong = int.Parse(txtSoLuong.Text);
-
-
-            if (NguyenLieu_BUS.SuaNguyenLieu(nguyenLieu))
+            else
             {
-
-                drvNL = null;
-                txtTenNL.Text = "";
-                txtDonVi.Text = "";
-                txtSoLuong.Text = "";
-
-                LoadNguyenLieu();
-                MessageBox.Show("Sửa thành công");
-                return;
-            }
-            MessageBox.Show("Sửa thất bại");
-        }
-
-        private void gABXoa_Click(object sender, EventArgs e)
-        {
-            if (drvNL == null)
-            {
-                MessageBox.Show("Chọn món ăn muốn xóa");
-                return;
-            }
-
-            NguyenLieu_DTO nguyenLieu = new NguyenLieu_DTO();
-            nguyenLieu.TenNL = txtTenNL.Text;
-            nguyenLieu.Donvi = txtDonVi.Text;
-            nguyenLieu.Soluong = int.Parse(txtSoLuong.Text);
-
-
-            if (MessageBox.Show("Bạn có chắc chắn muốn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                if (dsnguyenlieu == null)
-                    dtgrvDanhSachNL.DataSource = null;
-                if (NguyenLieu_BUS.XoaNguyenLieu(nguyenLieu))
+                if (drvNL == null)
                 {
+                    MessageBox.Show("Chọn Món Ăn Muốn Sửa");
+                    return;
+                }
+
+                NguyenLieu_DTO nguyenLieu = new NguyenLieu_DTO();
+
+                nguyenLieu.MaNL = int.Parse(drvNL.Cells["MaNL"].Value.ToString());
+                nguyenLieu.TenNL = txtTenNL.Text;
+                nguyenLieu.Donvi = txtDonVi.Text;
+                nguyenLieu.Soluong = int.Parse(txtSoLuong.Text);
+
+
+                if (NguyenLieu_BUS.SuaNguyenLieu(nguyenLieu))
+                {
+
                     drvNL = null;
                     txtTenNL.Text = "";
                     txtDonVi.Text = "";
                     txtSoLuong.Text = "";
+
                     LoadNguyenLieu();
-                    MessageBox.Show("Xóa thành công");
+                    MessageBox.Show("Sửa thành công");
                     return;
                 }
-                MessageBox.Show("Xóa thất bại");
+                MessageBox.Show("Sửa thất bại");
+            }
+        }
+
+        private void gABXoa_Click(object sender, EventArgs e)
+        {
+            if (TKDN.Substring(0, 2) == "NV")
+            {
+                MessageBox.Show("Chỉ có chức vụ quản lý mới được sử dụng chức năng này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (drvNL == null)
+                {
+                    MessageBox.Show("Chọn món ăn muốn xóa");
+                    return;
+                }
+
+                NguyenLieu_DTO nguyenLieu = new NguyenLieu_DTO();
+                nguyenLieu.TenNL = txtTenNL.Text;
+                nguyenLieu.Donvi = txtDonVi.Text;
+                nguyenLieu.Soluong = int.Parse(txtSoLuong.Text);
+
+
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    if (dsnguyenlieu == null)
+                        dtgrvDanhSachNL.DataSource = null;
+                    if (NguyenLieu_BUS.XoaNguyenLieu(nguyenLieu))
+                    {
+                        drvNL = null;
+                        txtTenNL.Text = "";
+                        txtDonVi.Text = "";
+                        txtSoLuong.Text = "";
+                        LoadNguyenLieu();
+                        MessageBox.Show("Xóa thành công");
+                        return;
+                    }
+                    MessageBox.Show("Xóa thất bại");
+                }
             }
         }
 
@@ -198,10 +213,20 @@ namespace RestaurantManagerment
 
         private void btnThongKeTheoNam_Click(object sender, EventArgs e)
         {
-            FormTKKho TK = new FormTKKho();
-            TK.ID = Ma;
-            TK.ShowDialog();
-            this.OnEnter(e);
+            if (TKDN.Substring(0, 2) == "NV")
+            {
+                MessageBox.Show("Chỉ có chức vụ quản lý mới được sử dụng chức năng này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                txtTenNL.Text = "";
+                txtDonVi.Text = "";
+                txtSoLuong.Text = "";
+                FormTKKho TK = new FormTKKho();
+                TK.ID = TKDN;
+                TK.ShowDialog();
+                this.OnEnter(e);
+            }
         }
     }
 }
